@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled, css, keyframes } from "styled-components";
 import backgroundImage from "../../assets/images/background.png";
 import vectorText from "../../assets/images/vectorText.png";
 
@@ -19,6 +19,35 @@ const buttonWithIcon = css`
 
   &:hover {
     background-color: #365977;
+  }
+`;
+
+/* KEYFRAMES */
+const shake = keyframes`
+  0%,
+  100% {
+	transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+	transform: translateY(-5px);
+  }
+
+  20%,
+  40%,
+  60% {
+	transform: translateY(5px);
+  }
+
+  80% {
+	transform: translateY(5.4px);
+  }
+
+  90% {
+	transform: translateY(-5.4px);
   }
 `;
 
@@ -159,6 +188,14 @@ export const HomeContainer = styled.section`
 
     button {
       ${buttonWithIcon}
+    }
+  }
+
+  .imgIceCreams {
+    img {
+      width: 400px;
+      filter: drop-shadow(0 50px 50px rgba(64, 99, 129, 100));
+      animation: ${shake} 10s ease-in-out 0s infinite normal none;
     }
   }
 `;
