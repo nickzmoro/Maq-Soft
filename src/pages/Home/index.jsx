@@ -1,14 +1,17 @@
-import { Header, Info, Nav } from "./style.js";
+import { Header, Info, Nav, HomeContainer } from "./style.js";
 import {
   HiOutlineLocationMarker,
   HiOutlineClock,
   HiShoppingCart,
+  HiOutlineClipboardList,
 } from "react-icons/hi";
 import logo from "../../assets/images/logo.png";
+import iceCreams from "../../assets/images/icecreams-home.png";
 
 const Home = () => {
   return (
     <>
+      {/* HEADER */}
       <Header>
         <Info>
           <p className="address">
@@ -54,6 +57,24 @@ const Home = () => {
           </div>
         </Nav>
       </Header>
+
+      {/* HOME */}
+      <HomeContainer>
+        <div className="infoCTA">
+          <h1>Maq Soft - A melhor sorveteria de Bauru!</h1>
+          <p>
+            Desde 2009, trazendo cremosidade e sabor irresistível para você.
+            Venha experimentar nossos sabores exclusivos!
+          </p>
+          <button className="btn-CTA">
+            Ver Cardápio
+            <HiOutlineClipboardList size={19} />
+          </button>
+        </div>
+        <div className="imgIceCreams">
+          <img src={iceCreams} alt="Nossos Sorvetes" loading="lazy" />
+        </div>
+      </HomeContainer>
     </>
   );
 };
