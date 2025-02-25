@@ -378,3 +378,102 @@ export const Banner = styled.section`
     }
   }
 `;
+
+/* NOSSOS PRODUTOS */
+export const ProductList = styled.section`
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  .product-container {
+    width: 66%;
+    height: 100%;
+
+    h2 {
+      font-size: 2.2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 15px;
+      font-weight: 800;
+      color: #1e1e1e;
+    }
+
+    .btn-filters {
+      margin: 20px 0 50px 0;
+      display: flex;
+      gap: 7px;
+    }
+
+    .products-container-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      .product-box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+        transition: 0.1s ease;
+
+        &:hover {
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
+          img {
+            transform: scale(1.02) rotate(2deg);
+          }
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+          transition: 0.3s ease;
+        }
+
+        .details-product {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h3 {
+            color: #1e1e1e;
+            font-size: 1.35rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.6);
+          }
+
+          .price {
+            color: #1e1e1e;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const FilterButton = styled.button`
+  color: ${(props) => (props.isActive ? "#fff" : "rgba(0, 0, 0, 0.5)")};
+  background-color: ${(props) => (props.isActive ? "#406381" : "transparent")};
+  border: ${(props) =>
+    props.isActive ? "none" : "1px solid rgba(0, 0, 0, 0.3);"};
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.1s ease;
+
+  &:hover {
+    background-color: ${(props) =>
+      props.isActive ? "#406381" : "rgba(0, 0, 0, 0.06)"};
+  }
+`;

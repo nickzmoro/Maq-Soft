@@ -6,6 +6,8 @@ import {
   ThreeFactors,
   NavLink,
   Banner,
+  ProductList,
+  FilterButton,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -189,16 +191,36 @@ const Home = () => {
       </Banner>
 
       {/* NOSSOS PRODUTOS */}
-      {product.map((product) => (
-        <div key={product.id}>
-          <img src={product.imageUrl} alt={product.name} loading="lazy" />
+      <ProductList>
+        <div className="product-container">
           <div>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
+            <h2>Nossos produtos</h2>
+          </div>
+          <div className="btn-filters">
+            <FilterButton isActive>Todos</FilterButton>
+            <FilterButton>Potes</FilterButton>
+            <FilterButton>Açaí</FilterButton>
+            <FilterButton>Picolés</FilterButton>
+          </div>
+          <div className="products-container-box">
+            {product.map((product) => (
+              <div key={product.id} className="product-box">
+                <img src={product.imageUrl} alt={product.name} loading="lazy" />
+                <div className="details-product">
+                  <h3>{product.name}</h3>
+                  <p>{product.description}</p>
+                  <p className="price">
+                    {Intl.NumberFormat("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    }).format(product.price)}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
+      </ProductList>
     </>
   );
 };
