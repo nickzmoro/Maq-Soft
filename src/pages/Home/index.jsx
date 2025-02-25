@@ -21,6 +21,7 @@ import cascaoTrufadoBanner from "../../assets/images/cascao-banner.png";
 import superSundaeBanner from "../../assets/images/sundae-banner.png";
 import milkShakeBanner from "../../assets/images/milkshake-banner.png";
 import { useState } from "react";
+import { product } from "../../data/products.js";
 
 const Home = () => {
   const [changeHeader, setChangeHeader] = useState(false);
@@ -186,6 +187,18 @@ const Home = () => {
           </div>
         </div>
       </Banner>
+
+      {/* NOSSOS PRODUTOS */}
+      {product.map((product) => (
+        <div key={product.id}>
+          <img src={product.imageUrl} alt={product.name} loading="lazy" />
+          <div>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <p>{product.price}</p>
+          </div>
+        </div>
+      ))}
     </>
   );
 };
