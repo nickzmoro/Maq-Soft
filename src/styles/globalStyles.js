@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
+    html, body {
+        scroll-behavior: smooth;
+    }
+
     ::-webkit-scrollbar {
         width: 8px; /* Largura do scrollbar */
     }

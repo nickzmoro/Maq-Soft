@@ -90,7 +90,7 @@ const Home = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink href="#" changeColor={changeHeader}>
+                  <NavLink href="#sabores" changeColor={changeHeader}>
                     Sabores
                   </NavLink>
                 </li>
@@ -217,7 +217,7 @@ const Home = () => {
       </Banner>
 
       {/* NOSSOS PRODUTOS */}
-      <ProductList>
+      <ProductList id="sabores">
         <div className="product-container">
           <div>
             <h2>Nossos produtos</h2>
