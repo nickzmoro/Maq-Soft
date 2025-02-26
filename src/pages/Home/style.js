@@ -454,6 +454,29 @@ export const ProductList = styled.section`
             color: #1e1e1e;
             font-weight: 700;
           }
+
+          .price-buy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              padding: 6px;
+              background-color: #3c4d5b;
+              border-radius: 5px;
+              cursor: pointer;
+              color: #fff;
+              font-weight: 500;
+              transition: 0.2s ease;
+
+              &:hover {
+                filter: opacity(0.9);
+              }
+            }
+          }
         }
       }
     }
@@ -464,7 +487,7 @@ export const FilterButton = styled.button`
   color: ${(props) => (props.isActive ? "#fff" : "rgba(0, 0, 0, 0.5)")};
   background-color: ${(props) => (props.isActive ? "#406381" : "transparent")};
   border: ${(props) =>
-    props.isActive ? "none" : "1px solid rgba(0, 0, 0, 0.3);"};
+    props.isActive ? "1px solid #406381" : "1px solid rgba(0, 0, 0, 0.3);"};
   font-size: 1.1rem;
   font-weight: 500;
   padding: 8px 20px;

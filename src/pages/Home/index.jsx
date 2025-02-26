@@ -17,6 +17,7 @@ import {
   HiOutlineShoppingBag,
 } from "react-icons/hi";
 import { PiGoogleChromeLogo, PiHourglassBold } from "react-icons/pi";
+import { IoBagAdd } from "react-icons/io5";
 import logo from "../../assets/images/logo.png";
 import iceCreams from "../../assets/images/icecreams-home.png";
 import cascaoTrufadoBanner from "../../assets/images/cascao-banner.png";
@@ -34,6 +35,31 @@ const Home = () => {
     } else {
       setChangeHeader(false);
     }
+  };
+
+  // Estado para armazenar a categoria de filtro ativa
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  // Função para filtrar produtos com base na categoria selecionada
+  const getFilteredProducts = () => {
+    if (activeFilter === "all") {
+      return product; // Retorna todos os produtos
+    } else if (activeFilter === "picole") {
+      return product.filter((item) => item.category === "picole");
+    } else if (activeFilter === "pote") {
+      return product.filter((item) => item.category === "pote");
+    } else if (activeFilter === "acai") {
+      return product.filter((item) => item.category === "acai");
+    }
+    return product; // Caso padrão
+  };
+
+  // Produtos filtrados baseados no filtro ativo
+  const filteredProducts = getFilteredProducts();
+
+  // Função para mudar o filtro ativo
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
   };
 
   return (
@@ -197,24 +223,49 @@ const Home = () => {
             <h2>Nossos produtos</h2>
           </div>
           <div className="btn-filters">
-            <FilterButton isActive>Todos</FilterButton>
-            <FilterButton>Potes</FilterButton>
-            <FilterButton>Açaí</FilterButton>
-            <FilterButton>Picolés</FilterButton>
+            <FilterButton
+              isActive={activeFilter === "all"}
+              onClick={() => handleFilterChange("all")}
+            >
+              Todos
+            </FilterButton>
+            <FilterButton
+              isActive={activeFilter === "pote"}
+              onClick={() => handleFilterChange("pote")}
+            >
+              Potes
+            </FilterButton>
+            <FilterButton
+              isActive={activeFilter === "acai"}
+              onClick={() => handleFilterChange("acai")}
+            >
+              Açaí
+            </FilterButton>
+            <FilterButton
+              isActive={activeFilter === "picole"}
+              onClick={() => handleFilterChange("picole")}
+            >
+              Picolés
+            </FilterButton>
           </div>
           <div className="products-container-box">
-            {product.map((product) => (
+            {filteredProducts.map((product) => (
               <div key={product.id} className="product-box">
                 <img src={product.imageUrl} alt={product.name} loading="lazy" />
                 <div className="details-product">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <p className="price">
-                    {Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    }).format(product.price)}
-                  </p>
+                  <div className="price-buy">
+                    <p className="price">
+                      {Intl.NumberFormat("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      }).format(product.price)}
+                    </p>
+                    <button>
+                      <IoBagAdd size={18} color="#fff" />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
