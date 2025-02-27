@@ -51,7 +51,6 @@ const Carousel = () => {
           ></img>
         </SwiperSlide>
       </Swiper>{" "}
-      ;
     </CarouselBox>
   );
 };

@@ -4,6 +4,7 @@ export const CarouselBox = styled.div`
   .mySwiper {
     width: 300px;
     height: 450px;
+    transform: scale(0.9);
 
     .swiper {
       margin: 100px auto;
@@ -23,7 +24,7 @@ export const CarouselBox = styled.div`
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
-      background: #fff;
+      background: rgba(0, 0, 0, 0.5);
       opacity: 0.5;
     }
 

@@ -8,6 +8,12 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    @media (max-width: 1150px) {
+        html {
+            font-size: 14px;
+        }
+    }
+
     * {
         font-family: 'Inter', sans-serif;
         margin: 0;
@@ -39,5 +45,11 @@ export const GlobalStyle = createGlobalStyle`
     * {
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Barra semi-transparente e fundo transparente */
+    }
+
+    .line-title {
+        width: 120px;
+        height: 2px;
+        background-color: #406381;
     }
 `;

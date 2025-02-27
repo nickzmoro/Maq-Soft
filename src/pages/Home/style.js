@@ -38,6 +38,12 @@ const buttonBanner = css`
   }
 `;
 
+const title = css`
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e1e1e;
+`;
+
 /* KEYFRAMES */
 const shake = keyframes`
   0%,
@@ -282,7 +288,6 @@ export const Banner = styled.section`
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  padding: 0rem 0 3rem 0;
 
   .bigger-banner {
     display: flex;
@@ -382,34 +387,49 @@ export const Banner = styled.section`
 /* NOSSOS PRODUTOS */
 export const ProductList = styled.section`
   width: 100vw;
-  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 110px 0;
 
   .product-container {
-    width: 66%;
+    width: 70%;
     height: 100%;
 
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 30px 0;
+    }
+
     h2 {
-      font-size: 2.2rem;
+      ${title}
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       padding-bottom: 15px;
-      font-weight: 800;
-      color: #1e1e1e;
     }
 
     .btn-filters {
       margin: 20px 0 50px 0;
       display: flex;
+      flex-wrap: wrap;
       gap: 7px;
     }
 
     .products-container-box {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      flex-wrap: wrap;
       gap: 15px;
+
+      @media (max-width: 1555px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 970px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       .product-box {
         display: flex;
@@ -487,7 +507,7 @@ export const FilterButton = styled.button`
   background-color: ${(props) => (props.isActive ? "#406381" : "transparent")};
   border: ${(props) =>
     props.isActive ? "1px solid #406381" : "1px solid rgba(0, 0, 0, 0.3);"};
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 8px 20px;
   border-radius: 50px;
@@ -497,5 +517,53 @@ export const FilterButton = styled.button`
   &:hover {
     background-color: ${(props) =>
       props.isActive ? "#406381" : "rgba(0, 0, 0, 0.06)"};
+  }
+`;
+
+/* SOBRE A MAQSOFT */
+export const AboutUs = styled.section`
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .ab-txt {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      .ab-title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h2 {
+          ${title}
+        }
+      }
+
+      .ab-paragraph {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.1rem;
+        max-width: 750px;
+        color: rgba(0, 0, 0, 0.7);
+
+        .ab-subtitle {
+          font-size: 1.15rem;
+          font-weight: 600;
+          color: #406381;
+        }
+      }
+    }
   }
 `;

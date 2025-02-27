@@ -8,6 +8,7 @@ import {
   Banner,
   ProductList,
   FilterButton,
+  AboutUs,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -25,6 +26,7 @@ import superSundaeBanner from "../../assets/images/sundae-banner.png";
 import milkShakeBanner from "../../assets/images/milkshake-banner.png";
 import { useState } from "react";
 import { product } from "../../data/products.js";
+import Carousel from "../../components/carousel/index.jsx";
 
 const Home = () => {
   const [changeHeader, setChangeHeader] = useState(false);
@@ -95,7 +97,7 @@ const Home = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink href="#" changeColor={changeHeader}>
+                  <NavLink href="#sobre" changeColor={changeHeader}>
                     Sobre
                   </NavLink>
                 </li>
@@ -272,6 +274,37 @@ const Home = () => {
           </div>
         </div>
       </ProductList>
+
+      {/* SOBRE */}
+      <AboutUs id="sobre">
+        <div className="about-container">
+          <div className="ab-txt">
+            <div className="ab-title">
+              <h2>Sobre a Maq Soft</h2>
+              <div className="line-title"></div>
+            </div>
+            <p className="ab-paragraph">
+              <span className="ab-subtitle">Quem nós somos?</span>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              odio ipsum quaerat repellendus? At quae, pariatur autem quas
+              quibusdam omnis deserunt eaque atque odit, magnam ea vitae
+              molestias, totam numquam? At quae, pariatur autem quas quibusdam
+              omnis deserunt eaque atque odit, magnam ea vitae molestias, totam
+              numquam?
+              <span className="ab-subtitle">Princípios e valores</span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium sint in fugit tenetur veniam animi, soluta voluptates
+              dolor doloribus eum distinctio repudiandae. Voluptas, repellat
+              facilis quibusdam vero doloremque quis accusantium. At quae,
+              pariatur autem quas quibusdam omnis deserunt eaque atque odit,
+              magnam ea vitae molestias, totam numquam?
+            </p>
+          </div>
+          <div className="carousel-container">
+            <Carousel className="carousel"></Carousel>
+          </div>
+        </div>
+      </AboutUs>
     </>
   );
 };
