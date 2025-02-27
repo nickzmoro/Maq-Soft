@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 
 export const CarouselBox = styled.div`
+  border-radius: 30% 70% 70% 30% / 30% 37% 63% 70%;
+  border: 1px solid #406381;
+  background-color: rgba(64, 99, 129, 0.2);
+
   .mySwiper {
     width: 300px;
     height: 450px;
@@ -10,7 +14,6 @@ export const CarouselBox = styled.div`
       margin: 100px auto;
       width: 300px;
       height: 450px;
-      border-radius: 12px;
     }
 
     .swiper-slide {

@@ -527,6 +527,7 @@ export const AboutUs = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 110px;
 
   .about-container {
     width: 70%;
@@ -534,6 +535,7 @@ export const AboutUs = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 35px;
 
     .ab-txt {
       display: flex;
