@@ -73,6 +73,59 @@ const shake = keyframes`
   }
 `;
 
+const opacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+/* Botão FIXO do WhatsApp */
+export const WhatsApp = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+
+    &::after {
+      content: "▶";
+      position: absolute;
+      top: 8px;
+      right: -12px;
+      color: #fff;
+      filter: drop-shadow(3px 1px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  a {
+    padding: 10px;
+    background-color: #25d366;
+    display: flex;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0 0 50px rgba(37, 211, 102, 0.5);
+    z-index: 2;
+  }
+
+  &:has(a:hover) p {
+    display: block;
+    animation: ${opacity} 0.5s ease normal;
+  }
+`;
+
 /* Header */
 export const Header = styled.header`
   position: fixed;
@@ -599,6 +652,102 @@ export const Depoiments = styled.section`
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 10px;
+    }
+  }
+`;
+
+/* LOCALIZAÇÃO */
+export const Location = styled.section`
+  width: 100vw;
+  height: auto;
+  background-color: #406381;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 250px 0 110px 0;
+
+  .vector-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .location-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    .loc-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .loc-txt {
+        .loc-title {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+
+          h2 {
+            ${title}
+            color: #fff;
+          }
+
+          & .line-title {
+            background-color: #bee1ff;
+          }
+        }
+
+        p,
+        strong {
+          font-size: 1.1rem;
+          color: rgba(256, 256, 256, 0.8);
+          max-width: 550px;
+        }
+      }
+
+      .social-media {
+        p {
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        .sc-media-icon {
+          display: flex;
+          gap: 5px;
+
+          a {
+            display: flex;
+            padding: 8px;
+            background-color: rgba(190, 225, 255, 0.2);
+            border-radius: 50px;
+            transition: 0.2s ease;
+            border: 1px solid rgba(256, 256, 256, 0.5);
+
+            &:hover {
+              background-color: rgba(190, 225, 255, 0.4);
+              color: #406381;
+            }
+          }
+        }
+      }
+    }
+
+    .loc-map {
+      border: 5px solid #bee1ff;
+      border-radius: 17px;
+      display: flex;
+
+      iframe {
+        border-radius: 12px;
+      }
     }
   }
 `;

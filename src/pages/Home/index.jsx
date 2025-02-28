@@ -10,6 +10,8 @@ import {
   FilterButton,
   AboutUs,
   Depoiments,
+  Location,
+  WhatsApp,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -19,6 +21,11 @@ import {
   HiOutlineShoppingBag,
 } from "react-icons/hi";
 import { PiGoogleChromeLogo, PiHourglassBold } from "react-icons/pi";
+import {
+  AiOutlineInstagram,
+  AiOutlineFacebook,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import { IoBagAdd } from "react-icons/io5";
 import logo from "../../assets/images/logo.png";
 import iceCreams from "../../assets/images/icecreams-home.png";
@@ -29,6 +36,7 @@ import { useState } from "react";
 import { product } from "../../data/products.js";
 import Carousel from "../../components/carousel/index.jsx";
 import DepoimentsCard from "../../components/card_depoimentos/index.jsx";
+import vectorDivider from "../../assets/images/shape-divider.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -73,6 +81,17 @@ const Home = () => {
 
   return (
     <>
+      {/* BOTÃO WHATSAPP FIXO */}
+      <WhatsApp>
+        <p>Alguma dúvida? Entre em contato.</p>
+        <a
+          href="https://wa.me/5514996661883?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+          target="_blank"
+        >
+          <AiOutlineWhatsApp size={40} />
+        </a>
+      </WhatsApp>
+
       {/* HEADER */}
       <Header changeBackground={changeHeader}>
         <Info>
@@ -388,6 +407,72 @@ const Home = () => {
           </div>
         </div>
       </Depoiments>
+
+      {/* ONDE NOS ENCONTRAR? */}
+      <Location>
+        <img src={vectorDivider} alt="Vetor" className="vector-divider" />
+        <div className="location-container">
+          <div className="loc-info">
+            <div className="loc-txt">
+              <div className="loc-title">
+                <h2>Onde nos encontrar?</h2>
+                <div className="line-title"></div>
+              </div>
+              <p>
+                Estamos localizados na{" "}
+                <strong>
+                  R. Investigador Valdemir Nunes Medeiros, 2-16, Núcleo
+                  Eldorado, Bauru - SP, 17024-820
+                </strong>
+                . Venha nos visitar e aproveitar os melhores sorvetes da cidade!
+              </p>
+            </div>
+            <div className="social-media">
+              <p>Nos siga nas nossas redes sociais:</p>
+              <div className="sc-media-icon">
+                <a href="https://www.instagram.com/maq.soft/" target="_blank">
+                  <AiOutlineInstagram
+                    className="icon-media"
+                    size={35}
+                    color="#bee1ff"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063545444727"
+                  target="_blank"
+                >
+                  <AiOutlineFacebook
+                    className="icon-media"
+                    size={35}
+                    color="#bee1ff"
+                  />
+                </a>
+                <a
+                  href="https://wa.me/5514996661883?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+                  target="_blank"
+                >
+                  <AiOutlineWhatsApp
+                    className="icon-media"
+                    size={35}
+                    color="#bee1ff"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="loc-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.7077458926357!2d-49.05663912413176!3d-22.30358554629986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf67ec04c1fa31%3A0x5c685341ca969ae9!2sR.%20Investigador%20Valdemir%20Nunes%20Medeiros%2C%20236%20-%20N%C3%BAcleo%20Eldorado%2C%20Bauru%20-%20SP%2C%2017024-820!5e0!3m2!1spt-BR!2sbr!4v1740775966497!5m2!1spt-BR!2sbr"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </Location>
     </>
   );
 };
