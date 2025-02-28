@@ -569,3 +569,36 @@ export const AboutUs = styled.section`
     }
   }
 `;
+
+/* DEPOIMENTOS */
+export const Depoiments = styled.section`
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 110px;
+
+  .dp-container {
+    width: 70%;
+    height: 100%;
+
+    .dp-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+
+      h2 {
+        ${title}
+      }
+    }
+
+    .dp-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+`;

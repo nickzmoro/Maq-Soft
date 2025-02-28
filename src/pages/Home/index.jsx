@@ -9,6 +9,7 @@ import {
   ProductList,
   FilterButton,
   AboutUs,
+  Depoiments,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -27,6 +28,12 @@ import milkShakeBanner from "../../assets/images/milkshake-banner.png";
 import { useState } from "react";
 import { product } from "../../data/products.js";
 import Carousel from "../../components/carousel/index.jsx";
+import DepoimentsCard from "../../components/card_depoimentos/index.jsx";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Home = () => {
   const [changeHeader, setChangeHeader] = useState(false);
@@ -102,7 +109,10 @@ const Home = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink href="#" changeColor={changeHeader}>
+                  <NavLink
+                    href="#depoimentos-de-clientes"
+                    changeColor={changeHeader}
+                  >
                     Depoimentos
                   </NavLink>
                 </li>
@@ -305,6 +315,79 @@ const Home = () => {
           </div>
         </div>
       </AboutUs>
+
+      {/* DEPOIMENTOS */}
+      <Depoiments id="depoimentos-de-clientes">
+        <div className="dp-container">
+          <div className="dp-title">
+            <div className="line-title"></div>
+            <h2>O que os clientes dizem?</h2>
+          </div>
+          <div className="dp-cards">
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              grabCursor={true}
+              modules={[Pagination]}
+              className="mySwiper"
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                },
+                550: {
+                  slidesPerView: 2,
+                },
+                900: {
+                  slidesPerView: 3,
+                },
+                1100: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Francieli Ferrari B."
+                  customerMessage="“Um dos melhores sorvetes de Bauru, o atendimento então sem igual, o melhor”"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Ângela Oliveira"
+                  customerMessage="“Que ambiente agradável! Local limpo, organizado, perfeito para ir sozinho ou com a família. Amei!”"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Plinio Lopes"
+                  customerMessage="“Sorveteria versátil com opções quentes e um cantinho nostálgico. Parabéns!”"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Cauã Henrique"
+                  customerMessage="“Boa sorveteria com sorvetes de massa e soft deliciosos. Ambiente agradável e bom atendimento!”"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Fernando Rocha"
+                  customerMessage="“Ótima sorveteria com sorvetes deliciosos, ambiente agradável e ótimo atendimento.”"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DepoimentsCard
+                  user="Gustavo Joel"
+                  customerMessage="“Sorveteria excelente, com qualidade e ótimo atendimento. Faço questão de ir lá.”"
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </Depoiments>
     </>
   );
 };
