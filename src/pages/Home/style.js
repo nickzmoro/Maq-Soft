@@ -666,7 +666,7 @@ export const Location = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 250px 0 110px 0;
+  padding: 300px 0 110px 0;
 
   .vector-divider {
     position: absolute;
@@ -747,6 +747,101 @@ export const Location = styled.section`
 
       iframe {
         border-radius: 12px;
+      }
+    }
+  }
+`;
+
+/* CONTATO */
+export const Contact = styled.section`
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #406381;
+  padding: 110px 0 110px 0;
+
+  .contact-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .ct-title {
+      h2 {
+        ${title}
+        color: #fff;
+      }
+
+      .line-title {
+        background-color: #bee1ff;
+        margin-top: 5px;
+      }
+    }
+
+    .ct-form {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          label {
+            color: #fff;
+
+            span {
+              color: #bee1ff;
+            }
+          }
+
+          label,
+          span {
+            font-size: 1.1rem;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(256, 256, 256, 0.2);
+            border: 1px solid rgba(256, 256, 256, 0.3);
+            color: #fff;
+            font-size: 1rem;
+          }
+
+          & input::placeholder,
+          textarea::placeholder {
+            color: rgba(256, 256, 256, 0.5);
+          }
+
+          textarea {
+            min-height: 200px;
+            resize: vertical;
+          }
+        }
+
+        button {
+          width: fit-content;
+          padding: 10px 50px;
+          border-radius: 5px;
+          font-size: 1rem;
+          font-weight: 600;
+          color: #406381;
+          cursor: pointer;
+          margin-top: 5px;
+          transition: 0.2s ease;
+
+          &:hover {
+            filter: opacity(0.9);
+          }
+        }
       }
     }
   }
