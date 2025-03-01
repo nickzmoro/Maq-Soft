@@ -13,6 +13,7 @@ import {
   Location,
   WhatsApp,
   Contact,
+  Footer,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -20,6 +21,7 @@ import {
   HiShoppingCart,
   HiOutlineClipboardList,
   HiOutlineShoppingBag,
+  HiArrowSmUp,
 } from "react-icons/hi";
 import { PiGoogleChromeLogo, PiHourglassBold } from "react-icons/pi";
 import {
@@ -410,7 +412,7 @@ const Home = () => {
       </Depoiments>
 
       {/* ONDE NOS ENCONTRAR? */}
-      <Location>
+      <Location id="localizacao">
         <img src={vectorDivider} alt="Vetor" className="vector-divider" />
         <div className="location-container">
           <div className="loc-info">
@@ -528,6 +530,54 @@ const Home = () => {
           </div>
         </div>
       </Contact>
+
+      {/* FOOTER */}
+      <Footer>
+        <div className="footer-container">
+          <div className="footer-top">
+            <div className="foot-info">
+              <img src={logo} alt="logo" loading="lazy" />
+              <p className="email">maqsoft@gmail.com</p>
+              <p className="tel">(14) 99162-9644</p>
+            </div>
+            <div className="foot-navigation">
+              <div>
+                <p>Início</p>
+                <a href="#">Voltar ao topo</a>
+              </div>
+              <div>
+                <p>Produtos</p>
+                <a href="#sabores">Ver nossos produtos</a>
+              </div>
+              <div>
+                <p>Sobre</p>
+                <a href="#sobre">Quem somos</a>
+                <a href="#sobre">Princípios</a>
+              </div>
+              <div>
+                <p>Localização</p>
+                <a href="#localizacao">Endereço</a>
+                <a
+                  href="https://maps.app.goo.gl/CxqPzc7UZb2hb5wF7"
+                  target="_blank"
+                >
+                  Google Maps
+                </a>
+              </div>
+              <div>
+                <p>Avaliações</p>
+                <a href="#depoimentos-de-clientes">Google</a>
+              </div>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>Copyright © 2025 | Todos os direitos reservados.</p>
+            <a href="#">
+              <HiArrowSmUp color="#bee1ff" size={20} />
+            </a>
+          </div>
+        </div>
+      </Footer>
     </>
   );
 };
