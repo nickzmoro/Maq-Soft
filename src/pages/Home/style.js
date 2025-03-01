@@ -816,6 +816,12 @@ export const Contact = styled.section`
             font-size: 1rem;
           }
 
+          & input:focus,
+          textarea:focus {
+            outline: none;
+            border: 1px solid #fff;
+          }
+
           & input::placeholder,
           textarea::placeholder {
             color: rgba(256, 256, 256, 0.5);
