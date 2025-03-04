@@ -189,7 +189,7 @@ export const Nav = styled.nav`
   }
 
   .btn-cart {
-    button {
+    a {
       ${buttonWithIcon}
     }
   }

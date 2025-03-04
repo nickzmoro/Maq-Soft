@@ -45,8 +45,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect } from "react";
 
-const Home = () => {
+import { Link } from "react-router-dom";
+
+function Home() {
   const [changeHeader, setChangeHeader] = useState(false);
 
   window.onscroll = () => {
@@ -80,6 +83,59 @@ const Home = () => {
   // Função para mudar o filtro ativo
   const handleFilterChange = (filter) => {
     setActiveFilter(filter);
+  };
+
+  // FUNÇÕES DO  CARRINHO
+  const [, setContadorCarrinho] = useState(0);
+
+  // Atualizar contador do carrinho ao carregar a página
+  useEffect(() => {
+    atualizarContadorCarrinho();
+  }, []);
+
+  // Função para adicionar produto ao carrinho
+  const adicionarAoCarrinho = (product) => {
+    // Buscar carrinho do localStorage ou inicializar array vazio
+    const carrinhoAtual = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    // Verificar se o produto já existe no carrinho
+    const produtoExistente = carrinhoAtual.find(
+      (item) => item.id === product.id
+    );
+
+    let novoCarrinho;
+
+    if (produtoExistente) {
+      // Atualizar quantidade se o produto já existe
+      novoCarrinho = carrinhoAtual.map((item) =>
+        item.id === product.id
+          ? { ...item, quantidade: item.quantidade + 1 }
+          : item
+      );
+    } else {
+      // Adicionar novo produto ao carrinho
+      const novoProduto = {
+        ...product,
+        quantidade: 1,
+      };
+      novoCarrinho = [...carrinhoAtual, novoProduto];
+    }
+
+    // Salvar no localStorage
+    localStorage.setItem("carrinho", JSON.stringify(novoCarrinho));
+
+    // Atualizar o contador
+    atualizarContadorCarrinho();
+
+    // Mostrar confirmação
+    alert(`${product.name} adicionado ao carrinho!`);
+  };
+
+  // Função para atualizar o contador de itens no carrinho
+  const atualizarContadorCarrinho = () => {
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const total = carrinho.reduce((soma, item) => soma + item.quantidade, 0);
+    setContadorCarrinho(total);
   };
 
   return (
@@ -147,10 +203,10 @@ const Home = () => {
             </nav>
           </div>
           <div className="btn-cart">
-            <button>
+            <Link to="/carrinho">
               <HiShoppingCart size={19} />
               Carrinho
-            </button>
+            </Link>
           </div>
         </Nav>
       </Header>
@@ -296,7 +352,12 @@ const Home = () => {
                         currency: "BRL",
                       }).format(product.price)}
                     </p>
-                    <button>
+                    <button
+                      data-name={product.name}
+                      data-price={product.price}
+                      data-id={product.id}
+                      onClick={() => adicionarAoCarrinho(product)}
+                    >
                       <IoBagAdd size={18} color="#fff" />
                     </button>
                   </div>
@@ -580,6 +641,6 @@ const Home = () => {
       </Footer>
     </>
   );
-};
+}
 
 export default Home;
