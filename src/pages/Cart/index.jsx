@@ -1,5 +1,7 @@
+import { CartContainer } from "../Cart/style.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HiArrowSmLeft, HiOutlineTrash } from "react-icons/hi";
 
 export const Cart = () => {
   const [itensCarrinho, setItensCarrinho] = useState([]);
@@ -63,76 +65,89 @@ export const Cart = () => {
   };
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>Seu Carrinho</h1>
-      </header>
+    <CartContainer>
+      <div className="cart-content">
+        <header>
+          <Link to="/" className="btn-back">
+            <HiArrowSmLeft
+              size={22}
+              color="rgba(0, 0, 0, 0.9)"
+              className="icon-back"
+            />
+            Voltar
+          </Link>
+          <h3>Seu Carrinho</h3>
+        </header>
 
-      <main>
-        {itensCarrinho.length === 0 ? (
-          <div className="carrinho-vazio">
-            <p>Seu carrinho está vazio.</p>
-            <Link to="/#sabores" className="btn-continuar">
-              Ver Produtos
-            </Link>
-          </div>
-        ) : (
-          <>
-            <div className="itens-carrinho">
-              {itensCarrinho.map((item) => (
-                <div key={item.id} className="item-carrinho">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.name}
-                    className="item-imagem"
-                  />
-
-                  <div className="item-detalhes">
-                    <h3>{item.name}</h3>
-                    <p>R$ {item.price.toFixed(2)}</p>
-                  </div>
-
-                  <div className="item-quantidade">
-                    <button
-                      className="btn-quantidade"
-                      onClick={() => alterarQuantidade(item.id, -1)}
-                    >
-                      -
-                    </button>
-                    <span>{item.quantidade}</span>
-                    <button
-                      className="btn-quantidade"
-                      onClick={() => alterarQuantidade(item.id, 1)}
-                    >
-                      +
-                    </button>
-                  </div>
-
-                  <div className="item-subtotal">
-                    <p>R$ {(item.price * item.quantidade).toFixed(2)}</p>
-                  </div>
-
-                  <button
-                    className="btn-remover"
-                    onClick={() => removerItem(item.id)}
-                  >
-                    X
-                  </button>
-                </div>
-              ))}
+        <main>
+          {itensCarrinho.length === 0 ? (
+            <div className="empty-cart">
+              <p>Seu carrinho está vazio.</p>
             </div>
+          ) : (
+            <>
+              <div className="items-cart">
+                {itensCarrinho.map((item) => (
+                  <div key={item.id} className="item-cart-box">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className="item-image"
+                    />
 
-            <div className="resumo-carrinho">
-              <div className="total-carrinho">
-                <h3>Total:</h3>
-                <h3>R$ {total.toFixed(2)}</h3>
+                    <div className="item-details">
+                      <div>
+                        <p className="item-name">{item.name}</p>
+                      </div>
+
+                      <div className="item-quantity">
+                        <button
+                          className="btn-quantity"
+                          onClick={() => alterarQuantidade(item.id, -1)}
+                        >
+                          -
+                        </button>
+                        <span>{item.quantidade}</span>
+                        <button
+                          className="btn-quantity"
+                          onClick={() => alterarQuantidade(item.id, 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                      <div className="subtotal-remove">
+                        <div className="item-subtotal">
+                          <p>R$ {(item.price * item.quantidade).toFixed(2)}</p>
+                        </div>
+
+                        <button
+                          className="btn-remove"
+                          onClick={() => removerItem(item.id)}
+                        >
+                          <HiOutlineTrash
+                            size={18}
+                            color="#FF0000"
+                            className="icon-remove"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              <button className="btn-finalizar">Finalizar Compra</button>
-            </div>
-          </>
-        )}
-      </main>
-    </div>
+              <div className="cart-summary">
+                <div className="total-cart">
+                  <h3>Total:</h3>
+                  <h3>R$ {total.toFixed(2)}</h3>
+                </div>
+
+                <button className="btn-finish">Finalizar Compra</button>
+              </div>
+            </>
+          )}
+        </main>
+      </div>
+    </CartContainer>
   );
 };
