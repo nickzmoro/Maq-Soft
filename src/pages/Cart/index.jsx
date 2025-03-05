@@ -2,6 +2,7 @@ import { CartContainer } from "../Cart/style.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft, HiOutlineTrash } from "react-icons/hi";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 export const Cart = () => {
   const [itensCarrinho, setItensCarrinho] = useState([]);
@@ -137,12 +138,43 @@ export const Cart = () => {
               </div>
 
               <div className="cart-summary">
-                <div className="total-cart">
-                  <h3>Total:</h3>
-                  <h3>R$ {total.toFixed(2)}</h3>
+                <div className="viaWhatsApp">
+                  <AiOutlineWhatsApp size={56} color="#4CAF50" />
+                  <p>
+                    <span>Reserva via WhatsApp</span>
+                    Conclua seu pedido e reserve agora mesmo!
+                  </p>
                 </div>
 
-                <button className="btn-finish">Finalizar Compra</button>
+                <form className="cart-summary-detail">
+                  <div className="user-name">
+                    <label htmlFor="name">Nome:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Digite seu nome"
+                      required
+                    />
+                  </div>
+
+                  <div className="detail">
+                    <h3>Detalhe</h3>
+                    <p>
+                      Retirar em:
+                      <span>R. Investigador Valdemir Nunes Medeiros</span>
+                    </p>
+                  </div>
+
+                  <div className="total-cart">
+                    <h3>Total:</h3>
+                    <h3 className="total-price">R$ {total.toFixed(2)}</h3>
+                  </div>
+
+                  <button className="btn-finish" type="submit">
+                    Enviar pedido
+                  </button>
+                </form>
               </div>
             </>
           )}

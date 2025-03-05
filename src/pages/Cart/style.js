@@ -53,6 +53,7 @@ export const CartContainer = styled.div`
     main {
       display: flex;
       justify-content: space-between;
+      gap: 20px;
 
       .empty-cart {
         margin-top: 20px;
@@ -135,6 +136,120 @@ export const CartContainer = styled.div`
                   background-color: rgba(256, 0, 0, 0.3);
                 }
               }
+            }
+          }
+        }
+      }
+
+      .cart-summary {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        margin-top: 20px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .viaWhatsApp {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          background-color: #cfffd1;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 12px;
+          padding: 20px;
+
+          p {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 0.9rem;
+
+            span {
+              color: #4caf50;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .cart-summary-detail {
+          .user-name {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+            label {
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
+
+            input {
+              padding: 8px 16px;
+              border: 1px solid rgba(0, 0, 0, 0.25);
+              border-radius: 8px;
+              font-size: 0.9rem;
+            }
+          }
+
+          .detail {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+            h3 {
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
+
+            p {
+              display: flex;
+              justify-content: space-between;
+              color: rgba(0, 0, 0, 0.6);
+              font-weight: 500;
+
+              span {
+                max-width: 190px;
+              }
+            }
+          }
+
+          .total-cart {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            h3 {
+              font-size: 1rem;
+              color: rgba(0, 0, 0, 0.8);
+              font-weight: 600;
+            }
+
+            .total-price {
+              font-weight: 700;
+            }
+          }
+
+          .btn-finish {
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 12px;
+            background-color: #3c4d5b;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: 0.2s ease;
+
+            &:hover {
+              opacity: 90%;
             }
           }
         }
