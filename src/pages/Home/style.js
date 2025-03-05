@@ -486,7 +486,13 @@ export const ProductList = styled.section`
     }
 
     .btn-filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin: 20px 0 50px 0;
+    }
+
+    .btn-category {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
@@ -591,6 +597,25 @@ export const FilterButton = styled.button`
   &:hover {
     background-color: ${(props) =>
       props.isActive ? "#406381" : "rgba(0, 0, 0, 0.06)"};
+  }
+`;
+
+export const RemoveFilterButton = styled.button`
+  height: fit-content;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: transparent;
+  display: flex;
+  gap: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.06);
   }
 `;
 

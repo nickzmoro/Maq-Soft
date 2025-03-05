@@ -14,6 +14,7 @@ import {
   WhatsApp,
   Contact,
   Footer,
+  RemoveFilterButton,
 } from "./style.js";
 import {
   HiOutlineLocationMarker,
@@ -22,6 +23,7 @@ import {
   HiOutlineClipboardList,
   HiOutlineShoppingBag,
   HiArrowSmUp,
+  HiSwitchVertical,
 } from "react-icons/hi";
 import { PiGoogleChromeLogo, PiHourglassBold } from "react-icons/pi";
 import {
@@ -73,8 +75,14 @@ function Home() {
       return product.filter((item) => item.category === "picole");
     } else if (activeFilter === "pote") {
       return product.filter((item) => item.category === "pote");
-    } else if (activeFilter === "acai") {
-      return product.filter((item) => item.category === "acai");
+    } else if (activeFilter === "moreninha") {
+      return product.filter((item) => item.category === "moreninha");
+    } else if (activeFilter === "casquinha") {
+      return product.filter((item) => item.category === "casquinha");
+    } else if (activeFilter === "especiais") {
+      return product.filter((item) => item.category === "especiais");
+    } else if (activeFilter === "skimo") {
+      return product.filter((item) => item.category === "skimo");
     }
     return product; // Caso padrão
   };
@@ -342,30 +350,51 @@ function Home() {
             <h2>Nossos produtos</h2>
           </div>
           <div className="btn-filters">
-            <FilterButton
+            <div className="btn-category">
+              <FilterButton
+                isActive={activeFilter === "all"}
+                onClick={() => handleFilterChange("all")}
+              >
+                Todos
+              </FilterButton>
+              <FilterButton
+                isActive={activeFilter === "pote"}
+                onClick={() => handleFilterChange("pote")}
+              >
+                Potes
+              </FilterButton>
+              <FilterButton
+                isActive={activeFilter === "picole"}
+                onClick={() => handleFilterChange("picole")}
+              >
+                Picolés
+              </FilterButton>
+              <FilterButton
+                isActive={activeFilter === "especiais"}
+                onClick={() => handleFilterChange("especiais")}
+              >
+                Especiais
+              </FilterButton>
+              <FilterButton
+                isActive={activeFilter === "moreninha"}
+                onClick={() => handleFilterChange("moreninha")}
+              >
+                Moreninha
+              </FilterButton>
+              <FilterButton
+                isActive={activeFilter === "casquinha"}
+                onClick={() => handleFilterChange("casquinha")}
+              >
+                Casquinhas
+              </FilterButton>
+            </div>
+            <RemoveFilterButton
               isActive={activeFilter === "all"}
               onClick={() => handleFilterChange("all")}
             >
-              Todos
-            </FilterButton>
-            <FilterButton
-              isActive={activeFilter === "pote"}
-              onClick={() => handleFilterChange("pote")}
-            >
-              Potes
-            </FilterButton>
-            <FilterButton
-              isActive={activeFilter === "acai"}
-              onClick={() => handleFilterChange("acai")}
-            >
-              Açaí
-            </FilterButton>
-            <FilterButton
-              isActive={activeFilter === "picole"}
-              onClick={() => handleFilterChange("picole")}
-            >
-              Picolés
-            </FilterButton>
+              <HiSwitchVertical size={20} />
+              Limpar Filtros
+            </RemoveFilterButton>
           </div>
           <div className="products-container-box">
             {filteredProducts.map((product) => (
