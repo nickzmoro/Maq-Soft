@@ -49,6 +49,8 @@ import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+
 function Home() {
   const [changeHeader, setChangeHeader] = useState(false);
 
@@ -86,7 +88,7 @@ function Home() {
   };
 
   // FUNÇÕES DO  CARRINHO
-  const [, setContadorCarrinho] = useState(0);
+  const [contadorCarrinho, setContadorCarrinho] = useState(0);
 
   // Atualizar contador do carrinho ao carregar a página
   useEffect(() => {
@@ -128,7 +130,18 @@ function Home() {
     atualizarContadorCarrinho();
 
     // Mostrar confirmação
-    alert(`${product.name} adicionado ao carrinho!`);
+    toast.success(`${product.name} adicionado ao carrinho!`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      progressStyle: {
+        background: "#406381",
+      },
+    });
   };
 
   // Função para atualizar o contador de itens no carrinho
@@ -150,6 +163,19 @@ function Home() {
           <AiOutlineWhatsApp size={40} />
         </a>
       </WhatsApp>
+
+      {/* ALERTA */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
       {/* HEADER */}
       <Header changeBackground={changeHeader}>
@@ -207,6 +233,9 @@ function Home() {
               <HiShoppingCart size={19} />
               Carrinho
             </Link>
+            <div className="cart-count">
+              <p>{contadorCarrinho}</p>
+            </div>
           </div>
         </Nav>
       </Header>

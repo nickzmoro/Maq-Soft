@@ -189,8 +189,29 @@ export const Nav = styled.nav`
   }
 
   .btn-cart {
+    position: relative;
+
     a {
       ${buttonWithIcon}
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #d6ecff;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #406381;
+      }
     }
   }
 `;
