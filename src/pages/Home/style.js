@@ -363,6 +363,13 @@ export const Banner = styled.section`
   flex-wrap: wrap;
   gap: 15px;
 
+  .paragraph-banner {
+    font-size: 1.1rem;
+    color: rgba(256, 256, 256, 0.8);
+    max-width: 300px;
+    margin-bottom: 25px;
+  }
+
   .bigger-banner {
     display: flex;
     background-color: #31475a;
@@ -373,6 +380,7 @@ export const Banner = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       h4 {
         font-size: 1rem;
         letter-spacing: 1px;
@@ -386,32 +394,29 @@ export const Banner = styled.section`
         font-weight: 800;
         color: #fff;
         margin-bottom: 25px;
+
+        i {
+          color: #bee1ff;
+          font-weight: 700;
+          font-family: cursive;
+        }
       }
 
-      h4,
-      h3 {
+      h4 {
         text-transform: uppercase;
       }
 
       p {
-        font-size: 1.1rem;
-        color: rgba(256, 256, 256, 0.8);
-        max-width: 300px;
-        margin-bottom: 25px;
-
         span {
           color: #bee1ff;
         }
       }
-
-      button {
-        ${buttonBanner}
-      }
     }
 
     img {
-      width: 325px;
-      transform: scale(1.2) translateX(45px);
+      width: 412px;
+      transform: scale(1) translateX(45px);
+      filter: drop-shadow(0 0 25px rgba(190, 225, 255, 0.3));
     }
   }
 
@@ -435,8 +440,13 @@ export const Banner = styled.section`
         color: #fff;
       }
 
-      button {
+      a {
         ${buttonBanner}
+      }
+
+      img {
+        width: 120px;
+        filter: drop-shadow(0 0 25px rgba(190, 225, 255, 0.3));
       }
     }
 
@@ -448,7 +458,12 @@ export const Banner = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 20px;
+      gap: 10px;
+
+      p {
+        max-width: 250px;
+        margin-bottom: 10px;
+      }
     }
 
     img {

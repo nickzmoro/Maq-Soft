@@ -36,7 +36,7 @@ import logo from "../../assets/images/logo.png";
 import iceCreams from "../../assets/images/icecreams-home.png";
 import cascaoTrufadoBanner from "../../assets/images/cascao-banner.png";
 import superSundaeBanner from "../../assets/images/sundae-banner.png";
-import milkShakeBanner from "../../assets/images/milkshake-banner.png";
+import selfServiceBanner from "../../assets/images/self-service-banner.png";
 import { useState } from "react";
 import { product } from "../../data/products.js";
 import Carousel from "../../components/carousel/index.jsx";
@@ -323,39 +323,38 @@ function Home() {
       <Banner>
         <div className="bigger-banner">
           <div className="banner-txt">
-            <h4>O prefiridinho da galera</h4>
+            <h4>Self Service</h4>
             <h3>
-              Cascão <br />
-              Trufado
+              A R$54,90 <br />
+              p/<i>Kg</i>
             </h3>
-            <p>
-              Sorvete expresso <span>+</span> chocolate em volta <span>+</span>{" "}
-              cobertura <span>+</span> canudo waffer
+            <p className="paragraph-banner">
+              Sirva-se a vontade com nosso self service a partir de R$54,90 o
+              kg.
             </p>
-            <button>Reserve agora!</button>
           </div>
-          <img src={cascaoTrufadoBanner} alt="Cascão Trufado" loading="lazy" />
+          <img src={selfServiceBanner} alt="Cascão Trufado" loading="lazy" />
         </div>
         <div className="small-banners-container">
           <div className="small-banner">
             <div className="banner-txt">
-              <h3>
-                Super <br />
-                Sundae
-              </h3>
-              <button>Reserve agora!</button>
+              <h3>Picolés</h3>
+              <p className="paragraph-banner">
+                R$1,50 cada, a partir de 20 unidades sai por R$1,25 cada.
+              </p>
+              <a href="#sabores">Reserve agora!</a>
             </div>
             <img src={superSundaeBanner} alt="Super Sundae" loading="lazy" />
           </div>
           <div className="small-banner">
             <div className="banner-txt">
               <h3>
-                Milk <br />
-                Shake
+                Cascão <br />
+                Trufado
               </h3>
-              <button>Reserve agora!</button>
+              <a href="#sabores">Reserve agora!</a>
             </div>
-            <img src={milkShakeBanner} alt="Milk Shake" loading="lazy" />
+            <img src={cascaoTrufadoBanner} alt="Milk Shake" loading="lazy" />
           </div>
         </div>
       </Banner>
