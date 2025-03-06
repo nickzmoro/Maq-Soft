@@ -1,7 +1,258 @@
 import { v4 as uuidv4 } from "uuid";
 
 export const product = [
+  /* POTES */
+  {
+    id: uuidv4(),
+    name: "Pote de 1 Litro | Escolha seu sabor: ",
+    description:
+      "Temos diversos potes 1 litro de sorvete de massa: iogurte c/ amarena, abacaxi, etc..",
+    price: 20,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDdSkniJOP0wI9ALKhXMTjs2bnmVozY4DluFU1",
+    category: "pote",
+  },
+
+  /* CASQUINHAS */
+  {
+    id: uuidv4(),
+    name: "Casquinha",
+    description:
+      "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDZp5DtKlEQUgySX9aD18GcnzjbfAmxk0V5o2Y",
+    category: "casquinha",
+  },
+  {
+    id: uuidv4(),
+    name: "Cascão",
+    description:
+      "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura + canudo waffer",
+    price: 6,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDyfwv5rVz0FIVMfTijqKCHwNAO4GbnUdYQuLB",
+    category: "casquinha",
+  },
+  {
+    id: uuidv4(),
+    name: "Cascão Trufado",
+    description:
+      "Sorvete expresso de sabor baunilha, chocolate ou mista + chocolate em volta do cascão + cobertura + canudo waffer",
+    price: 7,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHmyWij3XdPrQBSItjFKOyEvM7ichpGbmV62D",
+    category: "casquinha",
+  },
+
+  /* ESPECIAIS */
+  {
+    id: uuidv4(),
+    name: "Sundae",
+    description:
+      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
+    price: 7,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDLk2UeLCesPVuz6kn9HYb1mxyAhlwf0NX83UR",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Super Sundae",
+    description:
+      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
+    price: 10,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD6ws0a5QU5cQyTzdms7vr1NwPKoJElFOa9gAH",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Sensação",
+    description:
+      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
+    price: 10,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDmePLjnyCdwVurFPNiSlXADcB2aJzhvpneOGt",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Ouro Branco",
+    description:
+      "Sorvete expresso + cobertura + Ouro Branco + ganache + farofa de amendoím",
+    price: 10,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDMSWck6r1SsypANUmTcOvB0KV8PzIkb9t6oaD",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Chanty Max",
+    description:
+      "Sorvete expresso + ganache chocolate + geleia morango + chantily",
+    price: 11,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDAqw6vdfhzeX4bdDxK06BYkQTySmG3jZ1gMrI",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Chanty Neve",
+    description:
+      "Sorvete expresso + cobertura + geleia morango + suspiros + chantily",
+    price: 11,
+    imageUrl: "",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Milk Shake 300ml",
+    description:
+      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
+    price: 12,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHUJxa73XdPrQBSItjFKOyEvM7ichpGbmV62D",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Milk Shake 400ml",
+    description:
+      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
+    price: 15,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDm21YkQyCdwVurFPNiSlXADcB2aJzhvpneOGt",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Milk Shake Gourmet 300ml",
+    description:
+      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
+    price: 16,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDiZlQ0XNgGMO3xDaYqj4Zhm75QtsdlvSc8BPI",
+    category: "especiais",
+  },
+  {
+    id: uuidv4(),
+    name: "Milk Shake Gourmet 400ml",
+    description:
+      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
+    price: 18,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD3ZzrWnunp9NKZ6LmTFzVMOCXPdyIluhBicQ7",
+    category: "especiais",
+  },
+
+  /* MORENINHA */
+  {
+    id: uuidv4(),
+    name: "Moreninha Ninho",
+    description:
+      "Sorvete com casquinha e cobertura de chocolate com recheio de ninho",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDk8I263JytOML05KhsaFWD49JvE2rqfANRZUd",
+    category: "moreninha",
+  },
+  {
+    id: uuidv4(),
+    name: "Moreninha Flocos",
+    description:
+      "Sorvete com casquinha e cobertura de chocolate com recheio de flocos",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHMyFEot3XdPrQBSItjFKOyEvM7ichpGbmV62",
+    category: "moreninha",
+  },
+  {
+    id: uuidv4(),
+    name: "Moreninha Chocolate",
+    description:
+      "Sorvete com casquinha e cobertura de chocolate com recheio de chocolate",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD8yfenpZQ2XoWUkVFjTKEu9IBybHfzerOGRDt",
+    category: "moreninha",
+  },
+  {
+    id: uuidv4(),
+    name: "Moreninha Morango",
+    description:
+      "Sorvete com casquinha e cobertura de chocolate com recheio de morango",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDgDAzt4GnHDxtaSXfOeciFpTJkvd4QUrzgCIy",
+    category: "moreninha",
+  },
+  {
+    id: uuidv4(),
+    name: "Moreninha Leite Condensado",
+    description:
+      "Sorvete com casquinha e cobertura de chocolate com recheio de leite condensado",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDFQHtMmEDwO12naVpCgSKhQTE8y4zWZrdeiN3",
+    category: "moreninha",
+  },
+
   /* PICOLÉS */
+  {
+    id: uuidv4(),
+    name: "Skimo",
+    description: "Picolé Skimo, sabor nata com chocolate (50g)",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDppfqoniMvKu9Zg8srHqSdUDVPcWJCznbpRAi",
+    category: "picole",
+  },
+  {
+    id: uuidv4(),
+    name: "Skimo de Chocomenta",
+    description: "Picolé Skimo, sabor chocomenta (50g)",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDxtIfa5APDYpXdZqFcBE5lsrhbHvSxW7CnOQ4",
+    category: "picole",
+  },
+  {
+    id: uuidv4(),
+    name: "Skimo de Morango",
+    description: "Picolé Skimo Lokura, sabor morango (50g)",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDV3OCrBTuhI3o2qOSkawUWAe1DGlib0JgxfQ8",
+    category: "picole",
+  },
+  {
+    id: uuidv4(),
+    name: "Skimo - Delírio",
+    description: "Picolé Skimo Delírio, sabor coco com chocolate (50g)",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD4ZtWarj7lIwtmodEAZSqy9LpDjFUPNfkGBns",
+    category: "picole",
+  },
+  {
+    id: uuidv4(),
+    name: "Skimo de Brigadeiro",
+    description: "Picolé Skimo, sabor brigadeiro (50g)",
+    price: 4,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDgf26KynHDxtaSXfOeciFpTJkvd4QUrzgCIyM",
+    category: "picole",
+  },
+  {
+    id: uuidv4(),
+    name: "Bombons Gelados",
+    description: "Bombons de nata com chocolate para se refrescar!",
+    price: 9,
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD0GOVq17dBKpYbdRkeLSr9hMftxPECZ7zW35o",
+    category: "picole",
+  },
   {
     id: uuidv4(),
     name: "Picolé de Iorgute de Morango",
@@ -325,202 +576,5 @@ export const product = [
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD1veKxwYB9HsJWzKMrZjdqkRt5yflLbVoQagP",
     category: "picole",
-  },
-
-  /* MORENINHA */
-  {
-    id: uuidv4(),
-    name: "Moreninha Ninho",
-    description:
-      "Sorvete com casquinha e cobertura de chocolate com recheio de ninho",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDk8I263JytOML05KhsaFWD49JvE2rqfANRZUd",
-    category: "moreninha",
-  },
-  {
-    id: uuidv4(),
-    name: "Moreninha Flocos",
-    description:
-      "Sorvete com casquinha e cobertura de chocolate com recheio de flocos",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHMyFEot3XdPrQBSItjFKOyEvM7ichpGbmV62",
-    category: "moreninha",
-  },
-  {
-    id: uuidv4(),
-    name: "Moreninha Chocolate",
-    description:
-      "Sorvete com casquinha e cobertura de chocolate com recheio de chocolate",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD8yfenpZQ2XoWUkVFjTKEu9IBybHfzerOGRDt",
-    category: "moreninha",
-  },
-  {
-    id: uuidv4(),
-    name: "Moreninha Morango",
-    description:
-      "Sorvete com casquinha e cobertura de chocolate com recheio de morango",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDgDAzt4GnHDxtaSXfOeciFpTJkvd4QUrzgCIy",
-    category: "moreninha",
-  },
-  {
-    id: uuidv4(),
-    name: "Moreninha Leite Condensado",
-    description:
-      "Sorvete com casquinha e cobertura de chocolate com recheio de leite condensado",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDFQHtMmEDwO12naVpCgSKhQTE8y4zWZrdeiN3",
-    category: "moreninha",
-  },
-
-  /* POTES */
-  {
-    id: uuidv4(),
-    name: "Pote de 1 Litro | Escolha seu sabor: ",
-    description:
-      "Temos diversos potes 1 litro de sorvete de massa: iogurte c/ amarena, abacaxi, etc..",
-    price: 20,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDdSkniJOP0wI9ALKhXMTjs2bnmVozY4DluFU1",
-    category: "pote",
-  },
-
-  /* CASQUINHAS */
-  {
-    id: uuidv4(),
-    name: "Casquinha",
-    description:
-      "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura",
-    price: 4,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDZp5DtKlEQUgySX9aD18GcnzjbfAmxk0V5o2Y",
-    category: "casquinha",
-  },
-  {
-    id: uuidv4(),
-    name: "Cascão",
-    description:
-      "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura + canudo waffer",
-    price: 6,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDyfwv5rVz0FIVMfTijqKCHwNAO4GbnUdYQuLB",
-    category: "casquinha",
-  },
-  {
-    id: uuidv4(),
-    name: "Cascão Trufado",
-    description:
-      "Sorvete expresso de sabor baunilha, chocolate ou mista + chocolate em volta do cascão + cobertura + canudo waffer",
-    price: 7,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHmyWij3XdPrQBSItjFKOyEvM7ichpGbmV62D",
-    category: "casquinha",
-  },
-
-  /* ESPECIAIS */
-  {
-    id: uuidv4(),
-    name: "Sundae",
-    description:
-      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 7,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDLk2UeLCesPVuz6kn9HYb1mxyAhlwf0NX83UR",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Super Sundae",
-    description:
-      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 10,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD6ws0a5QU5cQyTzdms7vr1NwPKoJElFOa9gAH",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Sensação",
-    description:
-      "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 10,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDmePLjnyCdwVurFPNiSlXADcB2aJzhvpneOGt",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Ouro Branco",
-    description:
-      "Sorvete expresso + cobertura + Ouro Branco + ganache + farofa de amendoím",
-    price: 10,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDMSWck6r1SsypANUmTcOvB0KV8PzIkb9t6oaD",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Chanty Max",
-    description:
-      "Sorvete expresso + ganache chocolate + geleia morango + chantily",
-    price: 11,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDAqw6vdfhzeX4bdDxK06BYkQTySmG3jZ1gMrI",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Chanty Neve",
-    description:
-      "Sorvete expresso + cobertura + geleia morango + suspiros + chantily",
-    price: 11,
-    imageUrl: "",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Milk Shake 300ml",
-    description:
-      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
-    price: 12,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHUJxa73XdPrQBSItjFKOyEvM7ichpGbmV62D",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Milk Shake 400ml",
-    description:
-      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
-    price: 15,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDm21YkQyCdwVurFPNiSlXADcB2aJzhvpneOGt",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Milk Shake Gourmet 300ml",
-    description:
-      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
-    price: 16,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDiZlQ0XNgGMO3xDaYqj4Zhm75QtsdlvSc8BPI",
-    category: "especiais",
-  },
-  {
-    id: uuidv4(),
-    name: "Milk Shake Gourmet 400ml",
-    description:
-      "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
-    price: 18,
-    imageUrl:
-      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD3ZzrWnunp9NKZ6LmTFzVMOCXPdyIluhBicQ7",
-    category: "especiais",
   },
 ];
