@@ -54,6 +54,11 @@ export const CartContainer = styled.div`
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      position: relative;
+
+      @media (max-width: 910px) {
+        flex-direction: column;
+      }
 
       .empty-cart {
         margin-top: 20px;
@@ -73,8 +78,15 @@ export const CartContainer = styled.div`
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
           padding: 20px 0;
 
-          img {
-            width: 90px;
+          .image-container {
+            min-width: 125px;
+            height: 150px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
           }
 
           .item-details {
@@ -149,6 +161,12 @@ export const CartContainer = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 20px;
+        height: 60vh;
+        max-height: 60vh;
+        position: sticky;
+        top: 20px;
+        right: 0;
 
         .viaWhatsApp {
           display: flex;

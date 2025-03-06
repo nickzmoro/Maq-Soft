@@ -90,11 +90,13 @@ export const Cart = () => {
               <div className="items-cart">
                 {itensCarrinho.map((item) => (
                   <div key={item.id} className="item-cart-box">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.name}
-                      className="item-image"
-                    />
+                    <div className="image-container">
+                      <img
+                        src={item.imageUrl}
+                        alt={item.name}
+                        className="item-image"
+                      />
+                    </div>
 
                     <div className="item-details">
                       <div>
