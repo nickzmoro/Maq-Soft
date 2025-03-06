@@ -159,6 +159,23 @@ function Home() {
     setContadorCarrinho(total);
   };
 
+  /*
+    FUNÇÃO VER MAIS
+  */
+  const [produtosExibidos, setProdutosExibidos] = useState(9); // Começar mostrando 8 produtos
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleVerMais = () => {
+    // Aumenta o número de produtos exibidos (pode adicionar um valor fixo ou duplicar)
+    setProdutosExibidos((prevState) => prevState + 9);
+    setIsExpanded(true);
+  };
+
+  const handleVerMenos = () => {
+    setProdutosExibidos(9); // Volta para o número inicial de produtos
+    setIsExpanded(false);
+  };
+
   return (
     <>
       {/* BOTÃO WHATSAPP FIXO */}
@@ -397,9 +414,15 @@ function Home() {
             </RemoveFilterButton>
           </div>
           <div className="products-container-box">
-            {filteredProducts.map((product) => (
+            {filteredProducts.slice(0, produtosExibidos).map((product) => (
               <div key={product.id} className="product-box">
-                <img src={product.imageUrl} alt={product.name} loading="lazy" />
+                <div className="image-container">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    loading="lazy"
+                  />
+                </div>
                 <div className="details-product">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
@@ -422,6 +445,23 @@ function Home() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="btn-see-container">
+            {produtosExibidos < filteredProducts.length ? (
+              <button className="btn-see-more" onClick={handleVerMais}>
+                Ver Mais...
+              </button>
+            ) : (
+              isExpanded && (
+                <a
+                  className="btn-see-less"
+                  href="#sabores"
+                  onClick={handleVerMenos}
+                >
+                  ...Ver Menos
+                </a>
+              )
+            )}
           </div>
         </div>
       </ProductList>
