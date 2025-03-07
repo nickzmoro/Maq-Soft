@@ -82,6 +82,8 @@ const opacity = keyframes`
   }
 `;
 
+/* Centralizando todas as sections para mobile */
+
 /* Botão FIXO do WhatsApp */
 export const WhatsApp = styled.div`
   position: fixed;
@@ -274,6 +276,12 @@ export const HomeContainer = styled.section`
     flex-direction: column;
     gap: 25px;
 
+    @media (max-width: 1150px) {
+      align-items: center;
+      text-align: center;
+      margin: 0 20px;
+    }
+
     h1 {
       font-size: 3.5rem;
       font-weight: 700;
@@ -294,6 +302,10 @@ export const HomeContainer = styled.section`
         background-repeat: no-repeat;
         background-size: 45%;
         z-index: -1;
+
+        @media (max-width: 1150px) {
+          left: 8%;
+        }
       }
     }
 
@@ -315,6 +327,10 @@ export const HomeContainer = styled.section`
       filter: drop-shadow(0 50px 50px rgba(64, 99, 129, 100));
       animation: ${shake} 10s ease-in-out 0s infinite normal none;
     }
+
+    @media (max-width: 1150px) {
+      display: none;
+    }
   }
 `;
 
@@ -325,25 +341,35 @@ export const ThreeFactors = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
   padding: 6rem 5rem;
 
-  .factor-content {
+  .factors {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 
-    .factor-txt {
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-        color: #406381;
-      }
+    @media (max-width: 942px) {
+      flex-direction: column;
+    }
 
-      p {
-        max-width: 280px;
-        font-size: 1.1rem;
+    .factor-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .factor-txt {
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+          color: #406381;
+        }
+
+        p {
+          max-width: 280px;
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -352,6 +378,11 @@ export const ThreeFactors = styled.section`
     width: 1px;
     height: 65px;
     background-color: rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 942px) {
+      width: 65px;
+      height: 1px;
+    }
   }
 `;
 
@@ -363,23 +394,36 @@ export const Banner = styled.section`
   flex-wrap: wrap;
   gap: 15px;
 
+  @media (max-width: 1292px) {
+    margin: 0 20px;
+  }
+
   .paragraph-banner {
     font-size: 1.1rem;
     color: rgba(256, 256, 256, 0.8);
     max-width: 300px;
-    margin-bottom: 25px;
   }
 
   .bigger-banner {
     display: flex;
+    gap: 10px;
     background-color: #31475a;
     border-radius: 12px;
-    padding: 0px 64px;
+    padding: 20px 64px;
+
+    @media (max-width: 1292px) {
+      flex-direction: column;
+      padding: 20px 30px;
+    }
 
     .banner-txt {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @media (max-width: 854px) {
+        margin-right: 65px;
+      }
 
       h4 {
         font-size: 1rem;
@@ -415,8 +459,16 @@ export const Banner = styled.section`
 
     img {
       width: 412px;
-      transform: scale(1) translateX(45px);
+      transform: translateX(45px);
       filter: drop-shadow(0 0 25px rgba(190, 225, 255, 0.3));
+
+      @media (max-width: 1292px) {
+        width: 165px;
+      }
+
+      @media (max-width: 854px) {
+        display: none;
+      }
     }
   }
 
@@ -485,6 +537,10 @@ export const ProductList = styled.section`
   .product-container {
     width: 70%;
     height: 100%;
+
+    @media (max-width: 595px) {
+      width: 85%;
+    }
 
     @media (max-width: 500px) {
       display: flex;
@@ -683,7 +739,12 @@ export const AboutUs = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 50px;
+
+    @media (max-width: 595px) {
+      justify-content: center;
+      width: 85%;
+    }
 
     .ab-txt {
       display: flex;
@@ -694,6 +755,11 @@ export const AboutUs = styled.section`
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @media (max-width: 595px) {
+          flex-direction: column;
+          align-items: start;
+        }
 
         h2 {
           ${title}
@@ -725,17 +791,27 @@ export const Depoiments = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding-bottom: 110px;
 
   .dp-container {
     width: 70%;
     height: 100%;
 
+    @media (max-width: 595px) {
+      width: 85%;
+    }
+
     .dp-title {
       display: flex;
       align-items: center;
       gap: 20px;
       margin-bottom: 35px;
+
+      @media (max-width: 595px) {
+        flex-direction: column;
+        align-items: start;
+      }
 
       h2 {
         ${title}
@@ -774,13 +850,22 @@ export const Location = styled.section`
     height: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
+
+    @media (max-width: 595px) {
+      width: 85%;
+    }
+
+    @media (max-width: 850px) {
+      justify-content: baseline;
+    }
 
     .loc-info {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 25px;
 
       .loc-txt {
         .loc-title {
@@ -788,6 +873,11 @@ export const Location = styled.section`
           align-items: center;
           gap: 15px;
           margin-bottom: 15px;
+
+          @media (max-width: 595px) {
+            flex-direction: column;
+            align-items: start;
+          }
 
           h2 {
             ${title}
@@ -808,6 +898,9 @@ export const Location = styled.section`
       }
 
       .social-media {
+        display: flex;
+        flex-direction: column;
+
         p {
           margin-bottom: 10px;
           font-size: 1.2rem;
@@ -840,8 +933,18 @@ export const Location = styled.section`
       border-radius: 17px;
       display: flex;
 
+      @media (max-width: 595px) {
+        width: 100%;
+        justify-content: center;
+      }
+
       iframe {
         border-radius: 12px;
+
+        @media (max-width: 850px) {
+          width: 100%;
+          height: 300px;
+        }
       }
     }
   }
@@ -864,10 +967,18 @@ export const Contact = styled.section`
     flex-direction: column;
     gap: 30px;
 
+    @media (max-width: 595px) {
+      width: 85%;
+    }
+
     .ct-title {
       h2 {
         ${title}
         color: #fff;
+
+        @media (max-width: 595px) {
+          text-align: start;
+        }
       }
 
       .line-title {
@@ -909,6 +1020,16 @@ export const Contact = styled.section`
             border: 1px solid rgba(256, 256, 256, 0.3);
             color: #fff;
             font-size: 1rem;
+          }
+
+          label,
+          input,
+          textarea,
+          input::placeholder,
+          textarea::placeholder {
+            @media (max-width: 595px) {
+              text-align: start;
+            }
           }
 
           & input:focus,
@@ -964,12 +1085,18 @@ export const Footer = styled.footer`
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 595px) {
+      width: 85%;
+    }
+
     .footer-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(256, 256, 256, 0.5);
       padding-bottom: 15px;
+      gap: 20px;
+      flex-wrap: wrap;
 
       .foot-info {
         img {
@@ -990,6 +1117,7 @@ export const Footer = styled.footer`
       .foot-navigation {
         display: flex;
         gap: 25px;
+        flex-wrap: wrap;
 
         div {
           display: flex;
@@ -1020,11 +1148,14 @@ export const Footer = styled.footer`
     .footer-bottom {
       display: flex;
       justify-content: space-between;
+      flex-direction: row-reverse;
       align-items: center;
       margin-top: 15px;
+      gap: 25px;
 
       p {
         color: rgba(256, 256, 256, 0.8);
+        text-align: end;
       }
 
       a {
