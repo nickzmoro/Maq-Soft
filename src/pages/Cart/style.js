@@ -17,26 +17,39 @@ export const CartContainer = styled.div`
       flex-direction: column;
       gap: 20px;
 
-      .btn-back {
+      .nav-history {
         display: flex;
-        gap: 8px;
-        color: rgba(0, 0, 0, 0.9);
-        font-size: 1.1rem;
-        font-weight: 600;
-        border: 1px solid rgba(0, 0, 0, 0.9);
+        align-items: center;
+        gap: 10px;
         width: fit-content;
-        padding: 8px 24px;
-        border-radius: 12px;
 
-        .icon-back {
-          transition: 0.2s ease;
+        .home {
+          font-weight: 600;
         }
 
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.05);
+        p {
+          font-weight: 500;
+        }
 
-          .icon-back {
-            transform: translateX(-2px);
+        .home {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+          }
+        }
+
+        .home,
+        p,
+        span {
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 1.1rem;
+
+          @media (max-width: 768px) {
+            font-size: 1.3rem;
           }
         }
       }

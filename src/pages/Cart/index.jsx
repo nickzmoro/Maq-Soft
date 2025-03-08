@@ -1,8 +1,8 @@
 import { CartContainer } from "../Cart/style.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { HiArrowSmLeft, HiOutlineTrash } from "react-icons/hi";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import { HiOutlineTrash } from "react-icons/hi";
+import { AiOutlineWhatsApp, AiFillHome } from "react-icons/ai";
 
 export const Cart = () => {
   const [itensCarrinho, setItensCarrinho] = useState([]);
@@ -69,14 +69,18 @@ export const Cart = () => {
     <CartContainer>
       <div className="cart-content">
         <header>
-          <Link to="/" className="btn-back">
-            <HiArrowSmLeft
-              size={22}
-              color="rgba(0, 0, 0, 0.9)"
-              className="icon-back"
-            />
-            Voltar
-          </Link>
+          <div className="nav-history">
+            <Link to="/" className="home">
+              <AiFillHome
+                size={17}
+                color="rgba(0, 0, 0, 0.6)"
+                className="icon-back"
+              />
+              Início
+            </Link>
+            <span>/</span>
+            <p>Carrinho</p>
+          </div>
           <h3>Seu Carrinho</h3>
         </header>
 
