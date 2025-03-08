@@ -448,9 +448,7 @@ export const HomeContainer = styled.section`
   gap: 50px;
   width: 100vw;
   min-height: 100vh;
-  background-image: url(${backgroundImage});
-  background-position: center;
-  background-attachment: fixed;
+  background: url(${backgroundImage}) no-repeat center/cover fixed;
   position: relative;
   z-index: 1;
 

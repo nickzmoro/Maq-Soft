@@ -54,7 +54,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -64,6 +64,14 @@ import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 
 function Home() {
+  // Forçar a página a ficar no topo na inicialização
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+    window.scrollTo(0, 0); // Mantém a página no topo
+  }, []);
+
   const [changeHeader, setChangeHeader] = useState(false);
 
   window.onscroll = () => {
@@ -710,7 +718,7 @@ function Home() {
                   />
                 </a>
                 <a
-                  href="https://wa.me/5514996661883?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+                  href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
                   target="_blank"
                 >
                   <AiOutlineWhatsApp
@@ -755,7 +763,7 @@ function Home() {
                   name="nome"
                   placeholder="Digite o seu nome"
                   required
-                  autoFocus
+                  ref={inputRef}
                 />
               </div>
 
