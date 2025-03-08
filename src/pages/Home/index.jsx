@@ -54,7 +54,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -64,14 +64,6 @@ import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 
 function Home() {
-  // Forçar a página a ficar no topo na inicialização
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current?.focus();
-    window.scrollTo(0, 0); // Mantém a página no topo
-  }, []);
-
   const [changeHeader, setChangeHeader] = useState(false);
 
   window.onscroll = () => {
@@ -763,7 +755,6 @@ function Home() {
                   name="nome"
                   placeholder="Digite o seu nome"
                   required
-                  ref={inputRef}
                 />
               </div>
 
