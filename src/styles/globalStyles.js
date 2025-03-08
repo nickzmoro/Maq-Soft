@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.1); /* Cor da "barra" do scrollbar (semi-transparente) */
+        background: rgba(0, 0, 0, 0.001); /* Cor da "barra" do scrollbar (semi-transparente) */
         border-radius: 4px;
     }
 

@@ -30,18 +30,25 @@ import {
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineWhatsApp,
+  AiFillHome,
 } from "react-icons/ai";
+import { FaComments, FaIceCream, FaInfoCircle } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { IoBagAdd } from "react-icons/io5";
+
 import logo from "../../assets/images/logo.png";
 import iceCreams from "../../assets/images/icecreams-home.png";
 import cascaoTrufadoBanner from "../../assets/images/cascao-banner.png";
 import superSundaeBanner from "../../assets/images/sundae-banner.png";
 import selfServiceBanner from "../../assets/images/self-service-banner.png";
+import vectorDivider from "../../assets/images/shape-divider.png";
+
 import { useState } from "react";
+
 import { product } from "../../data/products.js";
+
 import Carousel from "../../components/carousel/index.jsx";
 import DepoimentsCard from "../../components/card_depoimentos/index.jsx";
-import vectorDivider from "../../assets/images/shape-divider.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -52,6 +59,9 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
+
+import { slide as Menu } from "react-burger-menu";
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
   const [changeHeader, setChangeHeader] = useState(false);
@@ -176,6 +186,20 @@ function Home() {
     setIsExpanded(false);
   };
 
+  /*
+    MENU HAMBÚRGUER
+  */
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const handleStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       {/* BOTÃO WHATSAPP FIXO */}
@@ -206,11 +230,11 @@ function Home() {
       <Header changeBackground={changeHeader}>
         <Info>
           <p className="address">
-            <HiOutlineLocationMarker size={18} />
+            <HiOutlineLocationMarker size={18} className="icon" />
             R. Investigador Valdemir Nunes Medeiros
           </p>
           <p className="openingHours">
-            <HiOutlineClock size={18} />
+            <HiOutlineClock size={18} className="icon" />
             Seg. à Sáb: 13:30 - 22:00 / Dom. 14:30 - 22:00
           </p>
         </Info>
@@ -219,49 +243,124 @@ function Home() {
           <div className="image-logo">
             <img src={logo} alt="Logo" loading="lazy" />
           </div>
-          <div className="navigation">
-            <nav>
-              <ul>
-                <li>
-                  <NavLink href="#" changeColor={changeHeader}>
-                    Início
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="#sabores" changeColor={changeHeader}>
-                    Sabores
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="#sobre" changeColor={changeHeader}>
-                    Sobre
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href="#depoimentos-de-clientes"
+
+          {isMobile ? (
+            <div className="nav-container">
+              <Menu
+                isOpen={menuOpen}
+                onStateChange={handleStateChange}
+                right={true}
+              >
+                <h3>Links rápidos</h3>
+                <NavLink
+                  href="#"
+                  changeColor={changeHeader}
+                  onClick={closeMenu}
+                  className="navlink-mobile"
+                >
+                  <AiFillHome color="#406381" />
+                  Início
+                </NavLink>
+                <NavLink
+                  href="#sabores"
+                  changeColor={changeHeader}
+                  onClick={closeMenu}
+                  className="navlink-mobile"
+                >
+                  <FaIceCream color="#406381" />
+                  Sabores
+                </NavLink>
+                <NavLink
+                  href="#sobre"
+                  changeColor={changeHeader}
+                  onClick={closeMenu}
+                  className="navlink-mobile"
+                >
+                  <FaInfoCircle color="#406381" />
+                  Sobre
+                </NavLink>
+                <NavLink
+                  href="#depoimentos-de-clientes"
+                  changeColor={changeHeader}
+                  onClick={closeMenu}
+                  className="navlink-mobile"
+                >
+                  <FaComments color="#406381" />
+                  Depoimentos
+                </NavLink>
+                <NavLink
+                  href="#contato"
+                  changeColor={changeHeader}
+                  onClick={closeMenu}
+                  className="navlink-mobile"
+                >
+                  <MdEmail color="#406381" />
+                  Contato
+                </NavLink>
+              </Menu>
+
+              <div className="btn-cart">
+                <Link to="/carrinho">
+                  <HiShoppingCart
+                    size={19}
+                    className="icon-cart"
                     changeColor={changeHeader}
-                  >
-                    Depoimentos
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="#contato" changeColor={changeHeader}>
-                    Contato
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className="btn-cart">
-            <Link to="/carrinho">
-              <HiShoppingCart size={19} />
-              Carrinho
-            </Link>
-            <div className="cart-count">
-              <p>{contadorCarrinho}</p>
+                  />
+                  <span>Carrinho</span>
+                </Link>
+                <div className="cart-count">
+                  <p>{contadorCarrinho}</p>
+                </div>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="nav-container">
+              <div className="navigation">
+                <nav>
+                  <ul>
+                    <li>
+                      <NavLink href="#" changeColor={changeHeader}>
+                        Início
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink href="#sabores" changeColor={changeHeader}>
+                        Sabores
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink href="#sobre" changeColor={changeHeader}>
+                        Sobre
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="#depoimentos-de-clientes"
+                        changeColor={changeHeader}
+                      >
+                        Depoimentos
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink href="#contato" changeColor={changeHeader}>
+                        Contato
+                      </NavLink>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div className="btn-cart">
+                <Link to="/carrinho">
+                  <HiShoppingCart size={19} className="icon-cart" />
+                  <span>Carrinho</span>
+                </Link>
+                <div className="cart-count">
+                  <p>{contadorCarrinho}</p>
+                </div>
+              </div>
+            </div>
+          )}
         </Nav>
       </Header>
 
