@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #fff;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
     }
 
     @media (max-width: 1150px) {
@@ -26,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
     html, body {
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 
     ::-webkit-scrollbar {
