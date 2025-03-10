@@ -451,6 +451,7 @@ export const HomeContainer = styled.section`
   background: url(${backgroundImage}) no-repeat center/cover fixed;
   position: relative;
   z-index: 1;
+  object-fit: cover;
 
   &::before {
     content: "";

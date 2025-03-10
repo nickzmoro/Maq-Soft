@@ -7,6 +7,7 @@ import { AiOutlineWhatsApp, AiFillHome } from "react-icons/ai";
 export const Cart = () => {
   const [itensCarrinho, setItensCarrinho] = useState([]);
   const [total, setTotal] = useState(0);
+  const [nome, setNome] = useState("");
 
   // Carregar dados do carrinho ao iniciar
   useEffect(() => {
@@ -63,6 +64,32 @@ export const Cart = () => {
       0
     );
     setTotal(novoTotal);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Formata a mensagem com os itens do carrinho
+    const mensagem = `Olá! Gostaria de fazer um pedido:\n\n*PRODUTOS*\n${itensCarrinho
+      .map(
+        (item) =>
+          `• ${item.quantidade}x ${item.name} - R$ ${(
+            item.price * item.quantidade
+          ).toFixed(2)}`
+      )
+      .join("\n")}\n\n*Total*: R$ ${total.toFixed(2)}\n*Nome*: ${nome}`;
+
+    // Número do WhatsApp da loja
+    const numeroWhatsApp = "5514996661883";
+
+    // Codifica a mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem);
+
+    // Cria o link do WhatsApp
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+
+    // Abre o WhatsApp em uma nova janela
+    window.open(linkWhatsApp, "_blank");
   };
 
   return (
@@ -152,7 +179,7 @@ export const Cart = () => {
                   </p>
                 </div>
 
-                <form className="cart-summary-detail">
+                <form className="cart-summary-detail" onSubmit={handleSubmit}>
                   <div className="user-name">
                     <label htmlFor="name">Nome:</label>
                     <input
@@ -161,6 +188,8 @@ export const Cart = () => {
                       name="name"
                       placeholder="Digite seu nome"
                       required
+                      value={nome}
+                      onChange={(e) => setNome(e.target.value)}
                     />
                   </div>
 
