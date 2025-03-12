@@ -517,7 +517,7 @@ export const HomeContainer = styled.section`
       max-width: 600px;
     }
 
-    button {
+    .btn-CTA {
       ${buttonWithIcon}
     }
   }
@@ -805,11 +805,12 @@ export const ProductList = styled.section`
         gap: 20px;
         border-radius: 12px;
         padding: 20px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         transition: 0.1s ease;
 
         &:hover {
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
           img {
             transform: scale(1.02) rotate(2deg);

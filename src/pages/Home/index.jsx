@@ -206,7 +206,7 @@ function Home() {
       <WhatsApp>
         <p>Alguma dúvida? Entre em contato.</p>
         <a
-          href="https://wa.me/5514996661883?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+          href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
           target="_blank"
         >
           <AiOutlineWhatsApp size={40} />
@@ -372,10 +372,10 @@ function Home() {
             Desde 2009, trazendo cremosidade e sabor irresistível para você.
             Venha experimentar nossos sabores exclusivos!
           </p>
-          <button className="btn-CTA">
+          <a className="btn-CTA" href="#sabores">
             Ver Cardápio
             <HiOutlineClipboardList size={19} />
-          </button>
+          </a>
         </div>
         <div className="imgIceCreams">
           <img src={iceCreams} alt="Nossos Sorvetes" loading="lazy" />

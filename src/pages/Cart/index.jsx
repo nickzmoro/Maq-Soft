@@ -5,9 +5,9 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { AiOutlineWhatsApp, AiFillHome } from "react-icons/ai";
 
 export const Cart = () => {
-  const [itensCarrinho, setItensCarrinho] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [nome, setNome] = useState("");
+  const [itensCarrinho, setItensCarrinho] = useState([]); // estado do carrinho
+  const [total, setTotal] = useState(0); // estado do total
+  const [nome, setNome] = useState(""); // estado do nome
 
   // Carregar dados do carrinho ao iniciar
   useEffect(() => {
@@ -66,6 +66,7 @@ export const Cart = () => {
     setTotal(novoTotal);
   };
 
+  // Enviar pedido ao WhatsApp da sorveteria
   const handleSubmit = (e) => {
     e.preventDefault();
 
