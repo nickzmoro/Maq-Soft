@@ -81,7 +81,7 @@ export const Cart = () => {
       .join("\n")}\n\n*Total*: R$ ${total.toFixed(2)}\n*Nome*: ${nome}`;
 
     // Número do WhatsApp da loja
-    const numeroWhatsApp = "5514996661883";
+    const numeroWhatsApp = "5514991629644";
 
     // Codifica a mensagem para URL
     const mensagemCodificada = encodeURIComponent(mensagem);
