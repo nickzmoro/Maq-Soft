@@ -539,6 +539,7 @@ function Home() {
                       data-price={product.price}
                       data-id={product.id}
                       onClick={() => adicionarAoCarrinho(product)}
+                      aria-label="Adicionar ao carrinho"
                     >
                       <IoBagAdd size={18} color="#fff" />
                     </button>
