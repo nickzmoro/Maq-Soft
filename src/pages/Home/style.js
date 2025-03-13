@@ -561,7 +561,7 @@ export const ThreeFactors = styled.section`
       gap: 12px;
 
       .factor-txt {
-        h3 {
+        h2 {
           font-size: 1.2rem;
           margin-bottom: 5px;
           color: #406381;
@@ -626,7 +626,7 @@ export const Banner = styled.section`
         margin-right: 65px;
       }
 
-      h4 {
+      span {
         font-size: 1rem;
         letter-spacing: 1px;
         color: #bee1ff;
@@ -647,7 +647,7 @@ export const Banner = styled.section`
         }
       }
 
-      h4 {
+      span {
         text-transform: uppercase;
       }
 

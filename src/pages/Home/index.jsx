@@ -425,7 +425,7 @@ function Home() {
       <Banner>
         <div className="bigger-banner">
           <div className="banner-txt">
-            <h4>Self Service</h4>
+            <span>Self Service</span>
             <h3>
               A R$54,90 <br />
               p/<i>Kg</i>
