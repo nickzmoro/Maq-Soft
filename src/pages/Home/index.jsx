@@ -208,6 +208,7 @@ function Home() {
         <a
           href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
           target="_blank"
+          aria-label="WhatsApp"
         >
           <AiOutlineWhatsApp size={40} />
         </a>
@@ -300,7 +301,7 @@ function Home() {
               </Menu>
 
               <div className="btn-cart">
-                <Link to="/carrinho">
+                <Link to="/carrinho" aria-label="Carrinho">
                   <HiShoppingCart
                     size={19}
                     className="icon-cart"
@@ -351,7 +352,7 @@ function Home() {
               </div>
 
               <div className="btn-cart">
-                <Link to="/carrinho">
+                <Link to="/carrinho" aria-label="Carrinho">
                   <HiShoppingCart size={19} className="icon-cart" />
                   <span>Carrinho</span>
                 </Link>
@@ -692,7 +693,11 @@ function Home() {
             <div className="social-media">
               <p>Nos siga nas nossas redes sociais:</p>
               <div className="sc-media-icon">
-                <a href="https://www.instagram.com/maq.soft/" target="_blank">
+                <a
+                  href="https://www.instagram.com/maq.soft/"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
                   <AiOutlineInstagram
                     className="icon-media"
                     size={35}
@@ -702,6 +707,7 @@ function Home() {
                 <a
                   href="https://www.facebook.com/profile.php?id=100063545444727"
                   target="_blank"
+                  aria-label="Facebook"
                 >
                   <AiOutlineFacebook
                     className="icon-media"
@@ -712,6 +718,7 @@ function Home() {
                 <a
                   href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
                   target="_blank"
+                  aria-label="WhatsApp"
                 >
                   <AiOutlineWhatsApp
                     className="icon-media"
@@ -830,7 +837,7 @@ function Home() {
           </div>
           <div className="footer-bottom">
             <p>Copyright © 2025 | Todos os direitos reservados.</p>
-            <a href="#">
+            <a href="#" aria-label="Voltar ao topo">
               <HiArrowSmUp color="#bee1ff" size={20} />
             </a>
           </div>
