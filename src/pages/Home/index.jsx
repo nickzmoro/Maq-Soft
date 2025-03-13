@@ -389,7 +389,7 @@ function Home() {
           <div className="factor-content">
             <HiOutlineShoppingBag size={"5rem"} color="#406381" />
             <div className="factor-txt">
-              <h3>Reserva Online</h3>
+              <h2>Reserva Online</h2>
               <p>
                 Faça sua reserva de forma digital e retire seu sorvete sem
                 espera e fila!
@@ -400,7 +400,7 @@ function Home() {
           <div className="factor-content">
             <PiGoogleChromeLogo size={"5rem"} color="#406381" />
             <div className="factor-txt">
-              <h3>Avaliações do Google</h3>
+              <h2>Avaliações do Google</h2>
               <p>
                 Nossa sorveteria é muito bem avaliada no Google, trazendo boas
                 experiências.
@@ -411,7 +411,7 @@ function Home() {
           <div className="factor-content">
             <PiHourglassBold size={"5rem"} color="#406381" />
             <div className="factor-txt">
-              <h3>Experiência no mercado</h3>
+              <h2>Experiência no mercado</h2>
               <p>
                 Mais de 15 anos de tradição e centenas de clientes satisfeitos -
                 Reserve e Retire!
