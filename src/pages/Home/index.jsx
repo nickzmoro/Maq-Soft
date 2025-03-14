@@ -379,7 +379,13 @@ function Home() {
           </a>
         </div>
         <div className="imgIceCreams">
-          <img src={iceCreams} alt="Nossos Sorvetes" loading="lazy" />
+          <img
+            src={iceCreams}
+            alt="Nossos Sorvetes"
+            width={400}
+            height={400}
+            loading="lazy"
+          />
         </div>
       </HomeContainer>
 
@@ -435,7 +441,13 @@ function Home() {
               kg.
             </p>
           </div>
-          <img src={selfServiceBanner} alt="Cascão Trufado" loading="lazy" />
+          <img
+            src={selfServiceBanner}
+            alt="Self Service"
+            width={412}
+            height={400}
+            loading="lazy"
+          />
         </div>
         <div className="small-banners-container">
           <div className="small-banner">
@@ -446,7 +458,13 @@ function Home() {
               </p>
               <a href="#sabores">Reserve agora!</a>
             </div>
-            <img src={superSundaeBanner} alt="Super Sundae" loading="lazy" />
+            <img
+              src={superSundaeBanner}
+              alt="Super Sundae"
+              width={120}
+              height={120}
+              loading="lazy"
+            />
           </div>
           <div className="small-banner">
             <div className="banner-txt">
@@ -456,7 +474,13 @@ function Home() {
               </h3>
               <a href="#sabores">Reserve agora!</a>
             </div>
-            <img src={cascaoTrufadoBanner} alt="Milk Shake" loading="lazy" />
+            <img
+              src={cascaoTrufadoBanner}
+              alt="Cascão Trufado"
+              width={120}
+              height={120}
+              loading="lazy"
+            />
           </div>
         </div>
       </Banner>
@@ -521,6 +545,8 @@ function Home() {
                   <img
                     src={product.imageUrl}
                     alt={product.name}
+                    width={200}
+                    height={200}
                     loading="lazy"
                   />
                 </div>

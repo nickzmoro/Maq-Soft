@@ -36,22 +36,28 @@ const Carousel = () => {
           <img
             src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDs7AGHlmTAUkK0Lmuv17q9VjFpBHPoxaQ5W84"
             alt="cascão"
+            width={300}
+            height={450}
             loading="lazy"
-          ></img>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDs7AGHlmTAUkK0Lmuv17q9VjFpBHPoxaQ5W84"
             alt="cascão"
+            width={300}
+            height={450}
             loading="lazy"
-          ></img>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDs7AGHlmTAUkK0Lmuv17q9VjFpBHPoxaQ5W84"
             alt="cascão"
+            width={300}
+            height={450}
             loading="lazy"
-          ></img>
+          />
         </SwiperSlide>
       </Swiper>{" "}
     </CarouselBox>

@@ -11,6 +11,9 @@ const DepoimentsCard = ({ user, customerMessage }) => {
           <img
             src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDLBu0YSCesPVuz6kn9HYb1mxyAhlwf0NX83UR"
             alt="Usuário"
+            width={100}
+            height={100}
+            loading="lazy"
           />
         </div>
         <div className="name-user">
