@@ -367,7 +367,7 @@ export const Nav = styled.nav`
   }
 
   img {
-    width: 90px;
+    object-fit: contain;
     cursor: pointer;
 
     @media (max-width: 768px) {
@@ -1317,8 +1317,13 @@ export const Footer = styled.footer`
 
       .foot-info {
         img {
-          width: 125px;
+          object-fit: contain;
           margin-bottom: 5px;
+
+          @media (max-width: 765px) {
+            width: 100px;
+            height: 100px;
+          }
         }
 
         .email {

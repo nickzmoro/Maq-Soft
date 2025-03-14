@@ -242,7 +242,7 @@ function Home() {
 
         <Nav>
           <div className="image-logo">
-            <img src={logo} alt="Logo" loading="lazy" />
+            <img src={logo} alt="Logo" loading="lazy" width={90} height={90} />
           </div>
 
           {isMobile ? (
@@ -829,7 +829,13 @@ function Home() {
         <div className="footer-container">
           <div className="footer-top">
             <div className="foot-info">
-              <img src={logo} alt="logo" loading="lazy" />
+              <img
+                src={logo}
+                alt="logo"
+                loading="lazy"
+                width={125}
+                height={125}
+              />
               <p className="email">maqsoft@gmail.com</p>
               <p className="tel">(14) 99162-9644</p>
             </div>
