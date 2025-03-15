@@ -1,6 +1,6 @@
 import { styled, css, keyframes } from "styled-components";
-import backgroundImage from "../../assets/images/background.png";
-import vectorText from "../../assets/images/vectorText.png";
+import backgroundImage from "../../assets/images/background.webp";
+import vectorText from "../../assets/images/vectorText_1.webp";
 
 /* VARIÁVEIS */
 const buttonWithIcon = css`

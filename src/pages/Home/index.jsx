@@ -36,12 +36,12 @@ import { FaComments, FaIceCream, FaInfoCircle } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoBagAdd } from "react-icons/io5";
 
-import logo from "../../assets/images/logo.png";
-import iceCreams from "../../assets/images/icecreams-home.png";
-import cascaoTrufadoBanner from "../../assets/images/cascao-banner.png";
-import superSundaeBanner from "../../assets/images/sundae-banner.png";
-import selfServiceBanner from "../../assets/images/self-service-banner.png";
-import vectorDivider from "../../assets/images/shape-divider.png";
+import logo from "../../assets/images/logo.webp";
+import iceCreams from "../../assets/images/icecreams-home.webp";
+import cascaoTrufadoBanner from "../../assets/images/cascao-banner.webp";
+import superSundaeBanner from "../../assets/images/sundae-banner_1.webp";
+import selfServiceBanner from "../../assets/images/self-service-banner.webp";
+import vectorDivider from "../../assets/images/shape-divider.webp";
 
 import { useState } from "react";
 
@@ -384,13 +384,7 @@ function Home() {
             alt="Nossos Sorvetes"
             width={400}
             height={400}
-            fetchPriority="high"
-            loading="eager"
-            decoding="sync"
-            style={{
-              contentVisibility: "auto",
-              containIntrinsicSize: "400px",
-            }}
+            loading="lazy"
           />
         </div>
       </HomeContainer>
