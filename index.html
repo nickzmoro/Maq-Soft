@@ -17,12 +17,48 @@
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Otimização de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback para navegadores com JavaScript desativado -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      />
+    </noscript>
+
+    <!-- CSS crítico inline -->
+    <style>
+      /* Fallback da fonte enquanto carrega */
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Arial");
+      }
+
+      /* Previne Flash of Unstyled Content (FOUC) */
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
     <title>Maq Soft</title>
   </head>
   <body>
