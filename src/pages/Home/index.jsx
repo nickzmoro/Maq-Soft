@@ -384,7 +384,13 @@ function Home() {
             alt="Nossos Sorvetes"
             width={400}
             height={400}
-            loading="lazy"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
+            style={{
+              contentVisibility: "auto",
+              containIntrinsicSize: "400px",
+            }}
           />
         </div>
       </HomeContainer>
