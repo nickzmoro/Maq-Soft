@@ -280,6 +280,10 @@ export const Info = styled.div`
   color: #fff;
   padding: 10px 0;
 
+  @media (max-width: 728px) {
+    padding: 5px 0;
+  }
+
   .address {
     border-right: 1px solid #fff;
     padding-right: 20px;
@@ -330,6 +334,7 @@ export const Nav = styled.nav`
   @media (max-width: 768px) {
     justify-content: space-between;
     margin: 0 30px;
+    padding: 0;
 
     .btn-cart {
       a {
