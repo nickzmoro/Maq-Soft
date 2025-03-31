@@ -493,6 +493,10 @@ export const HomeContainer = styled.section`
       position: relative;
       margin-bottom: 15px;
 
+      .title-2 {
+        margin-left: 12px;
+      }
+
       @media (max-width: 768px) {
         font-size: 2.3rem;
         line-height: 50px;

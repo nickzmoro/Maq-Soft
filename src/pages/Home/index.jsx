@@ -368,7 +368,12 @@ function Home() {
       {/* HOME */}
       <HomeContainer>
         <div className="infoCTA">
-          <h1>Maq Soft - A melhor sorveteria de Bauru!</h1>
+          <div className="title-container">
+            <h1>
+              <span>Maq Soft -</span>
+              <span className="title-2">A melhor sorveteria de Bauru!</span>
+            </h1>
+          </div>
           <p>
             Desde 2009, trazendo cremosidade e sabor irresistível para você.
             Venha experimentar nossos sabores exclusivos!
