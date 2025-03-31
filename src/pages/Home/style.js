@@ -494,7 +494,9 @@ export const HomeContainer = styled.section`
       margin-bottom: 15px;
 
       @media (max-width: 768px) {
-        font-size: 3rem;
+        font-size: 2.3rem;
+        line-height: 50px;
+        margin-bottom: 0;
       }
 
       &:before {
@@ -510,7 +512,7 @@ export const HomeContainer = styled.section`
         z-index: -1;
 
         @media (max-width: 1150px) {
-          left: 8%;
+          display: none;
         }
       }
     }
