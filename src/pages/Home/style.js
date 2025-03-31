@@ -487,6 +487,7 @@ export const HomeContainer = styled.section`
     h1 {
       font-size: 3.5rem;
       font-weight: 700;
+      font-display: swap;
       color: #fff;
       max-width: 600px;
       line-height: 60px;

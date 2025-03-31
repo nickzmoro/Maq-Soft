@@ -389,14 +389,7 @@ function Home() {
             alt="Nossos Sorvetes"
             width={400}
             height={400}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            style={{
-              display: "block",
-              maxWidth: "90%",
-              height: "auto",
-            }}
+            loading="lazy"
           />
         </div>
       </HomeContainer>
