@@ -43,7 +43,7 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDs7AGHlmTAUkK0Lmuv17q9VjFpBHPoxaQ5W84"
+            src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD2rKw21xqeLzEmTVJ6MicXRnSk2Ay7BHpxKQ0"
             alt="cascão"
             width={300}
             height={450}
@@ -52,7 +52,16 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDs7AGHlmTAUkK0Lmuv17q9VjFpBHPoxaQ5W84"
+            src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDJdOcbNUKTilVtpgfcB5OqNmeaF69z84oHhwM"
+            alt="cascão"
+            width={300}
+            height={450}
+            loading="lazy"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD61FoWBQU5cQyTzdms7vr1NwPKoJElFOa9gAH"
             alt="cascão"
             width={300}
             height={450}

@@ -12,7 +12,6 @@ import {
   Depoiments,
   Location,
   WhatsApp,
-  Contact,
   Footer,
   RemoveFilterButton,
 } from "./style.js";
@@ -775,59 +774,6 @@ function Home() {
           </div>
         </div>
       </Location>
-
-      {/* FORMULÁRIO DE CONTATO */}
-      <Contact id="contato">
-        <div className="contact-container">
-          <div className="ct-title">
-            <h2>Fale conosco!</h2>
-            <div className="line-title"></div>
-          </div>
-          <div className="ct-form">
-            <form>
-              <div>
-                <label htmlFor="nome">
-                  Seu nome<span>*</span>
-                </label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Digite o seu nome"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email">
-                  Seu e-mail<span>*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Digite o seu melhor e-mail"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="mensagem">
-                  Mensagem<span>*</span>
-                </label>
-                <textarea
-                  name="mensagem"
-                  id="mensagem"
-                  placeholder="Deixe aqui a sua mensagem"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
-        </div>
-      </Contact>
 
       {/* FOOTER */}
       <Footer>

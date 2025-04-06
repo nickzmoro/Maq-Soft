@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: var(--font-inter);
     }
 
+    ::selection {
+        background-color: #BEE1FF;
+        color: #406381;
+    }
+
     @media (max-width: 1150px) {
         html {
             font-size: 14px;

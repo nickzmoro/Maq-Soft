@@ -102,7 +102,8 @@ export const product = [
     description:
       "Sorvete expresso + cobertura + geleia morango + suspiros + chantily",
     price: 11,
-    imageUrl: "",
+    imageUrl:
+      "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDrLvNPEeJSw7KVGlUWcyO5beoBZkY0ILNQ3EP",
     category: "especiais",
   },
   {
