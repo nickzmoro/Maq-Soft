@@ -19,7 +19,7 @@ export const product = [
     name: "Casquinha",
     description:
       "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDZp5DtKlEQUgySX9aD18GcnzjbfAmxk0V5o2Y",
     category: "casquinha",
@@ -29,7 +29,7 @@ export const product = [
     name: "Cascão",
     description:
       "Sorvete expresso de sabor baunilha, chocolate ou mista + cobertura + canudo waffer",
-    price: 6,
+    price: 7,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDyfwv5rVz0FIVMfTijqKCHwNAO4GbnUdYQuLB",
     category: "casquinha",
@@ -39,7 +39,7 @@ export const product = [
     name: "Cascão Trufado",
     description:
       "Sorvete expresso de sabor baunilha, chocolate ou mista + chocolate em volta do cascão + cobertura + canudo waffer",
-    price: 7,
+    price: 9,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHmyWij3XdPrQBSItjFKOyEvM7ichpGbmV62D",
     category: "casquinha",
@@ -51,7 +51,7 @@ export const product = [
     name: "Sundae",
     description:
       "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 7,
+    price: 9,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDLk2UeLCesPVuz6kn9HYb1mxyAhlwf0NX83UR",
     category: "especiais",
@@ -61,7 +61,7 @@ export const product = [
     name: "Super Sundae",
     description:
       "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 10,
+    price: 12,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD6ws0a5QU5cQyTzdms7vr1NwPKoJElFOa9gAH",
     category: "especiais",
@@ -71,7 +71,7 @@ export const product = [
     name: "Sensação",
     description:
       "Sorvete expresso + geleia de morango + ganache de chocolate + farofa de amendoim + canudo waffer",
-    price: 10,
+    price: 12,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDmePLjnyCdwVurFPNiSlXADcB2aJzhvpneOGt",
     category: "especiais",
@@ -81,7 +81,7 @@ export const product = [
     name: "Ouro Branco",
     description:
       "Sorvete expresso + cobertura + Ouro Branco + ganache + farofa de amendoím",
-    price: 10,
+    price: 12,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDMSWck6r1SsypANUmTcOvB0KV8PzIkb9t6oaD",
     category: "especiais",
@@ -91,7 +91,7 @@ export const product = [
     name: "Chanty Max",
     description:
       "Sorvete expresso + ganache chocolate + geleia morango + chantily",
-    price: 11,
+    price: 14,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDAqw6vdfhzeX4bdDxK06BYkQTySmG3jZ1gMrI",
     category: "especiais",
@@ -101,7 +101,7 @@ export const product = [
     name: "Chanty Neve",
     description:
       "Sorvete expresso + cobertura + geleia morango + suspiros + chantily",
-    price: 11,
+    price: 14,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDrLvNPEeJSw7KVGlUWcyO5beoBZkY0ILNQ3EP",
     category: "especiais",
@@ -111,7 +111,7 @@ export const product = [
     name: "Milk Shake 300ml",
     description:
       "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
-    price: 12,
+    price: 14,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHUJxa73XdPrQBSItjFKOyEvM7ichpGbmV62D",
     category: "especiais",
@@ -121,7 +121,7 @@ export const product = [
     name: "Milk Shake 400ml",
     description:
       "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional)",
-    price: 15,
+    price: 16,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDm21YkQyCdwVurFPNiSlXADcB2aJzhvpneOGt",
     category: "especiais",
@@ -131,7 +131,7 @@ export const product = [
     name: "Milk Shake Gourmet 300ml",
     description:
       "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
-    price: 16,
+    price: 18,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDiZlQ0XNgGMO3xDaYqj4Zhm75QtsdlvSc8BPI",
     category: "especiais",
@@ -141,7 +141,7 @@ export const product = [
     name: "Milk Shake Gourmet 400ml",
     description:
       "Sorvete expresso + leite + cobertura + sabor a escolher + Ovomaltine (opcional) + chantily",
-    price: 18,
+    price: 20,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD3ZzrWnunp9NKZ6LmTFzVMOCXPdyIluhBicQ7",
     category: "especiais",
@@ -153,7 +153,7 @@ export const product = [
     name: "Moreninha Ninho",
     description:
       "Sorvete com casquinha e cobertura de chocolate com recheio de ninho",
-    price: 4,
+    price: 5.5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDk8I263JytOML05KhsaFWD49JvE2rqfANRZUd",
     category: "moreninha",
@@ -163,7 +163,7 @@ export const product = [
     name: "Moreninha Flocos",
     description:
       "Sorvete com casquinha e cobertura de chocolate com recheio de flocos",
-    price: 4,
+    price: 5.5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDHMyFEot3XdPrQBSItjFKOyEvM7ichpGbmV62",
     category: "moreninha",
@@ -173,7 +173,7 @@ export const product = [
     name: "Moreninha Chocolate",
     description:
       "Sorvete com casquinha e cobertura de chocolate com recheio de chocolate",
-    price: 4,
+    price: 5.5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD8yfenpZQ2XoWUkVFjTKEu9IBybHfzerOGRDt",
     category: "moreninha",
@@ -183,7 +183,7 @@ export const product = [
     name: "Moreninha Morango",
     description:
       "Sorvete com casquinha e cobertura de chocolate com recheio de morango",
-    price: 4,
+    price: 5.5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDgDAzt4GnHDxtaSXfOeciFpTJkvd4QUrzgCIy",
     category: "moreninha",
@@ -193,7 +193,7 @@ export const product = [
     name: "Moreninha Leite Condensado",
     description:
       "Sorvete com casquinha e cobertura de chocolate com recheio de leite condensado",
-    price: 4,
+    price: 5.5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDFQHtMmEDwO12naVpCgSKhQTE8y4zWZrdeiN3",
     category: "moreninha",
@@ -204,7 +204,7 @@ export const product = [
     id: uuidv4(),
     name: "Skimo",
     description: "Picolé Skimo, sabor nata com chocolate (50g)",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDppfqoniMvKu9Zg8srHqSdUDVPcWJCznbpRAi",
     category: "picole",
@@ -213,7 +213,7 @@ export const product = [
     id: uuidv4(),
     name: "Skimo de Chocomenta",
     description: "Picolé Skimo, sabor chocomenta (50g)",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDxtIfa5APDYpXdZqFcBE5lsrhbHvSxW7CnOQ4",
     category: "picole",
@@ -222,7 +222,7 @@ export const product = [
     id: uuidv4(),
     name: "Skimo de Morango",
     description: "Picolé Skimo Lokura, sabor morango (50g)",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDV3OCrBTuhI3o2qOSkawUWAe1DGlib0JgxfQ8",
     category: "picole",
@@ -231,7 +231,7 @@ export const product = [
     id: uuidv4(),
     name: "Skimo - Delírio",
     description: "Picolé Skimo Delírio, sabor coco com chocolate (50g)",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD4ZtWarj7lIwtmodEAZSqy9LpDjFUPNfkGBns",
     category: "picole",
@@ -240,7 +240,7 @@ export const product = [
     id: uuidv4(),
     name: "Skimo de Brigadeiro",
     description: "Picolé Skimo, sabor brigadeiro (50g)",
-    price: 4,
+    price: 5,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDgf26KynHDxtaSXfOeciFpTJkvd4QUrzgCIyM",
     category: "picole",
@@ -249,7 +249,7 @@ export const product = [
     id: uuidv4(),
     name: "Bombons Gelados",
     description: "Bombons de nata com chocolate para se refrescar!",
-    price: 9,
+    price: 10,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQD0GOVq17dBKpYbdRkeLSr9hMftxPECZ7zW35o",
     category: "picole",

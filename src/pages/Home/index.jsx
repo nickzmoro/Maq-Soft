@@ -437,8 +437,8 @@ function Home() {
           <div className="banner-txt">
             <span>Self Service</span>
             <h3>
-              A R$54,90 <br />
-              p/<i>Kg</i>
+              A R$5,99 <br />
+              p/<i>100g</i>
             </h3>
             <p className="paragraph-banner">
               Sirva-se a vontade com nosso self service a partir de R$54,90 o
@@ -458,7 +458,7 @@ function Home() {
             <div className="banner-txt">
               <h3>Picolés</h3>
               <p className="paragraph-banner">
-                R$1,50 cada, a partir de 20 unidades sai por R$1,25 cada.
+                R$1,50 cada. Aproveite os nossos geladinhos querido!
               </p>
               <a href="#sabores">Reserve agora!</a>
             </div>
