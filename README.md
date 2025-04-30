@@ -1,7 +1,7 @@
 # Maq Soft 🍦
 
 ## Sobre o Projeto ✨
-A **Maq Soft** é uma loja virtual com sistema de carrinho e pedido automatizado via WhatsApp, tudo pensado para facilitar o dia a dia do cliente e gerar resultados reais para o negócio.
+- A **Maq Soft** é uma loja virtual com sistema de carrinho e pedido automatizado via WhatsApp, tudo pensado para facilitar o dia a dia do cliente e gerar resultados reais para o negócio.
 
 ---
 
