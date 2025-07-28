@@ -73,6 +73,13 @@ function Home() {
     }
   };
 
+  // Pegar ano atual
+  const getCurrentYear = () => {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    return currentYear;
+  };
+
   // Estado para armazenar a categoria de filtro ativa
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -441,7 +448,7 @@ function Home() {
               p/<i>100g</i>
             </h3>
             <p className="paragraph-banner">
-              Sirva-se a vontade com nosso self service a partir de R$54,90 o
+              Sirva-se a vontade com nosso self service a partir de R$59,90 o
               kg.
             </p>
           </div>
@@ -606,22 +613,27 @@ function Home() {
               <h2>Sobre a Maq Soft</h2>
               <div className="line-title"></div>
             </div>
-            <p className="ab-paragraph">
-              <span className="ab-subtitle">Quem nós somos?</span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
-              odio ipsum quaerat repellendus? At quae, pariatur autem quas
-              quibusdam omnis deserunt eaque atque odit, magnam ea vitae
-              molestias, totam numquam? At quae, pariatur autem quas quibusdam
-              omnis deserunt eaque atque odit, magnam ea vitae molestias, totam
-              numquam?
-              <span className="ab-subtitle">Princípios e valores</span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium sint in fugit tenetur veniam animi, soluta voluptates
-              dolor doloribus eum distinctio repudiandae. Voluptas, repellat
-              facilis quibusdam vero doloremque quis accusantium. At quae,
-              pariatur autem quas quibusdam omnis deserunt eaque atque odit,
-              magnam ea vitae molestias, totam numquam?
-            </p>
+            <div className="ab-paragraph">
+              <h2 className="ab-subtitle">Quem nós somos?</h2>
+              <p>
+                Desde 2009, a Maq Soft vem conquistando o paladar dos seus
+                clientes com sorvetes de alta qualidade, sabores exclusivos e um
+                atendimento que prioriza a satisfação total. Com preços
+                acessíveis e um compromisso com a excelência, a sorveteria se
+                tornou referência na região, sendo reconhecida por oferecer
+                experiências únicas e refrescantes para todas as idades.
+              </p>
+              <h2 className="ab-subtitle">Princípios e valores</h2>
+              <p>
+                A Maq Soft se baseia em princípios sólidos como honestidade,
+                simplicidade e compromisso com a qualidade. Desde 2009, oferece
+                sorvetes com sabores exclusivos, mantendo preços acessíveis e um
+                atendimento acolhedor. Valoriza a confiança dos clientes,
+                buscando sempre proporcionar experiências agradáveis, com
+                transparência, tradição e constante dedicação à satisfação de
+                quem a escolhe.
+              </p>
+            </div>
           </div>
           <div className="carousel-container">
             <Carousel className="carousel"></Carousel>
@@ -821,7 +833,9 @@ function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>Copyright © 2025 | Todos os direitos reservados.</p>
+            <p>
+              Copyright © {getCurrentYear()} | Todos os direitos reservados.
+            </p>
             <a href="#" aria-label="Voltar ao topo">
               <HiArrowSmUp color="#bee1ff" size={20} />
             </a>

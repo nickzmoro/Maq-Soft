@@ -82,6 +82,21 @@ const opacity = keyframes`
   }
 `;
 
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 50px rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 80px rgba(37, 211, 102, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 50px rgba(37, 211, 102, 0.5);
+  }
+`;
+
 /* Centralizando todas as sections para mobile */
 
 /* Botão FIXO do WhatsApp */
@@ -109,6 +124,10 @@ export const WhatsApp = styled.div`
       right: -12px;
       color: #fff;
       filter: drop-shadow(3px 1px 4px rgba(0, 0, 0, 0.25));
+
+      @media (max-width: 1150px) {
+        right: -10px;
+      }
     }
   }
 
@@ -120,11 +139,18 @@ export const WhatsApp = styled.div`
     color: #fff;
     box-shadow: 0 0 50px rgba(37, 211, 102, 0.5);
     z-index: 2;
+    animation: ${pulse} 2s ease-in-out infinite;
+    animation-delay: 1.5s; /* Começa após 1.5s e repete a cada 3.5s */
   }
 
   &:has(a:hover) p {
     display: block;
     animation: ${opacity} 0.5s ease normal;
+  }
+
+  /* Pausa a animação quando o usuário interage */
+  &:has(a:hover) a {
+    animation-play-state: paused;
   }
 `;
 
