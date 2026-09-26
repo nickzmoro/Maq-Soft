@@ -479,7 +479,7 @@ export const HomeContainer = styled.section`
   gap: 50px;
   width: 100vw;
   min-height: 100vh;
-  background: url(${backgroundImage}) no-repeat center/cover fixed;
+  background: url(${backgroundImage?.src || backgroundImage}) no-repeat center/cover fixed;
   position: relative;
   z-index: 1;
   object-fit: cover;
@@ -537,7 +537,7 @@ export const HomeContainer = styled.section`
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(${vectorText});
+        background-image: url(${vectorText?.src || vectorText});
         background-repeat: no-repeat;
         background-size: 45%;
         z-index: -1;

@@ -1,6 +1,8 @@
-import { CartContainer } from "../Cart/style.js";
+"use client";
+
+import { CartContainer } from "./style.js";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { HiOutlineTrash } from "react-icons/hi";
 import { AiOutlineWhatsApp, AiFillHome } from "react-icons/ai";
 
@@ -22,7 +24,7 @@ export const Cart = () => {
     // Calcular o total
     const valorTotal = carrinho.reduce(
       (soma, item) => soma + item.price * item.quantidade,
-      0
+      0,
     );
     setTotal(valorTotal);
   };
@@ -45,7 +47,7 @@ export const Cart = () => {
     // Recalcular total
     const novoTotal = carrinhoAtualizado.reduce(
       (soma, item) => soma + item.price * item.quantidade,
-      0
+      0,
     );
     setTotal(novoTotal);
   };
@@ -61,7 +63,7 @@ export const Cart = () => {
     // Recalcular total
     const novoTotal = carrinhoAtualizado.reduce(
       (soma, item) => soma + item.price * item.quantidade,
-      0
+      0,
     );
     setTotal(novoTotal);
   };
@@ -76,12 +78,12 @@ export const Cart = () => {
         (item) =>
           `• ${item.quantidade}x ${item.name} - R$ ${(
             item.price * item.quantidade
-          ).toFixed(2)}`
+          ).toFixed(2)}`,
       )
       .join("\n")}\n\n*Total*: R$ ${total.toFixed(2)}\n*Nome*: ${nome}`;
 
     // Número do WhatsApp da loja
-    const numeroWhatsApp = "5514991629644";
+    const numeroWhatsApp = "5514991478183";
 
     // Codifica a mensagem para URL
     const mensagemCodificada = encodeURIComponent(mensagem);
@@ -98,7 +100,7 @@ export const Cart = () => {
       <div className="cart-content">
         <header>
           <div className="nav-history">
-            <Link to="/" className="home">
+            <Link href="/" className="home">
               <AiFillHome
                 size={17}
                 color="rgba(0, 0, 0, 0.6)"

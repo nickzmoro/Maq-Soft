@@ -1,3 +1,5 @@
+"use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper/modules";
 import { CarouselBox } from "../carousel/style.js";

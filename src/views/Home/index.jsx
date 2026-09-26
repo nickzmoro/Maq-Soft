@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Header,
   Info,
@@ -42,7 +44,7 @@ import superSundaeBanner from "../../assets/images/sundae-banner_1.webp";
 import selfServiceBanner from "../../assets/images/self-service-banner.webp";
 import vectorDivider from "../../assets/images/shape-divider.webp";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { product } from "../../data/products.js";
 
@@ -53,9 +55,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect } from "react";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { ToastContainer, toast } from "react-toastify";
 
@@ -65,13 +66,18 @@ import { useMediaQuery } from "react-responsive";
 function Home() {
   const [changeHeader, setChangeHeader] = useState(false);
 
-  window.onscroll = () => {
-    if (window.scrollY > 150) {
-      setChangeHeader(true);
-    } else {
-      setChangeHeader(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setChangeHeader(true);
+      } else {
+        setChangeHeader(false);
+      }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Pegar ano atual
   const getCurrentYear = () => {
@@ -126,7 +132,7 @@ function Home() {
 
     // Verificar se o produto já existe no carrinho
     const produtoExistente = carrinhoAtual.find(
-      (item) => item.id === product.id
+      (item) => item.id === product.id,
     );
 
     let novoCarrinho;
@@ -136,7 +142,7 @@ function Home() {
       novoCarrinho = carrinhoAtual.map((item) =>
         item.id === product.id
           ? { ...item, quantidade: item.quantidade + 1 }
-          : item
+          : item,
       );
     } else {
       // Adicionar novo produto ao carrinho
@@ -196,7 +202,20 @@ function Home() {
     MENU HAMBÚRGUER
   */
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [mounted, setMounted] = useState(false);
+  const isMobileQuery = useMediaQuery({ maxWidth: 768 });
+  const isMobile = mounted && isMobileQuery;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const logoSrc = logo?.src || logo;
+  const iceCreamsSrc = iceCreams?.src || iceCreams;
+  const cascaoTrufadoBannerSrc = cascaoTrufadoBanner?.src || cascaoTrufadoBanner;
+  const superSundaeBannerSrc = superSundaeBanner?.src || superSundaeBanner;
+  const selfServiceBannerSrc = selfServiceBanner?.src || selfServiceBanner;
+  const vectorDividerSrc = vectorDivider?.src || vectorDivider;
 
   const handleStateChange = (state) => {
     setMenuOpen(state.isOpen);
@@ -212,7 +231,7 @@ function Home() {
       <WhatsApp>
         <p>Alguma dúvida? Entre em contato.</p>
         <a
-          href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+          href="https://wa.me/5514991478183?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
           target="_blank"
           aria-label="WhatsApp"
         >
@@ -248,7 +267,7 @@ function Home() {
 
         <Nav>
           <div className="image-logo">
-            <img src={logo} alt="Logo" loading="lazy" width={90} height={90} />
+            <img src={logoSrc} alt="Logo" loading="lazy" width={90} height={90} />
           </div>
 
           {isMobile ? (
@@ -307,7 +326,7 @@ function Home() {
               </Menu>
 
               <div className="btn-cart">
-                <Link to="/carrinho" aria-label="Carrinho">
+                <Link href="/carrinho" aria-label="Carrinho">
                   <HiShoppingCart
                     size={19}
                     className="icon-cart"
@@ -358,7 +377,7 @@ function Home() {
               </div>
 
               <div className="btn-cart">
-                <Link to="/carrinho" aria-label="Carrinho">
+                <Link href="/carrinho" aria-label="Carrinho">
                   <HiShoppingCart size={19} className="icon-cart" />
                   <span>Carrinho</span>
                 </Link>
@@ -391,7 +410,7 @@ function Home() {
         </div>
         <div className="imgIceCreams">
           <img
-            src={iceCreams}
+            src={iceCreamsSrc}
             alt="Nossos Sorvetes"
             width={400}
             height={400}
@@ -444,16 +463,16 @@ function Home() {
           <div className="banner-txt">
             <span>Self Service</span>
             <h3>
-              A R$5,99 <br />
+              A R$6,29 <br />
               p/<i>100g</i>
             </h3>
             <p className="paragraph-banner">
-              Sirva-se a vontade com nosso self service a partir de R$59,90 o
+              Sirva-se a vontade com nosso self service a partir de R$62,90 o
               kg.
             </p>
           </div>
           <img
-            src={selfServiceBanner}
+            src={selfServiceBannerSrc}
             alt="Self Service"
             width={412}
             height={400}
@@ -470,7 +489,7 @@ function Home() {
               <a href="#sabores">Reserve agora!</a>
             </div>
             <img
-              src={superSundaeBanner}
+              src={superSundaeBannerSrc}
               alt="Super Sundae"
               width={120}
               height={120}
@@ -486,7 +505,7 @@ function Home() {
               <a href="#sabores">Reserve agora!</a>
             </div>
             <img
-              src={cascaoTrufadoBanner}
+              src={cascaoTrufadoBannerSrc}
               alt="Cascão Trufado"
               width={120}
               height={120}
@@ -716,7 +735,7 @@ function Home() {
 
       {/* ONDE NOS ENCONTRAR? */}
       <Location id="localizacao">
-        <img src={vectorDivider} alt="Vetor" className="vector-divider" />
+        <img src={vectorDividerSrc} alt="Vetor" className="vector-divider" />
         <div className="location-container">
           <div className="loc-info">
             <div className="loc-txt">
@@ -759,7 +778,7 @@ function Home() {
                   />
                 </a>
                 <a
-                  href="https://wa.me/5514991629644?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
+                  href="https://wa.me/5514991478183?text=Olá!+Estou+entrando+em+contato+através+do+site+da+Maq+Soft.+Como+posso+ser+atendido(a)?"
                   target="_blank"
                   aria-label="WhatsApp"
                 >
@@ -793,14 +812,14 @@ function Home() {
           <div className="footer-top">
             <div className="foot-info">
               <img
-                src={logo}
+                src={logoSrc}
                 alt="logo"
                 loading="lazy"
                 width={125}
                 height={125}
               />
               <p className="email">maqsoft@gmail.com</p>
-              <p className="tel">(14) 99162-9644</p>
+              <p className="tel">(14) 99147-8183</p>
             </div>
             <div className="foot-navigation">
               <div>

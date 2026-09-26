@@ -1,13 +1,13 @@
-import { v4 as uuidv4 } from "uuid";
+const uuidv4 = () => "";
 
-export const product = [
+const rawProducts = [
   /* POTES */
   {
     id: uuidv4(),
     name: "Pote de 1 Litro | Escolha seu sabor: ",
     description:
       "Temos diversos potes 1 litro de sorvete de massa: iogurte c/ amarena, abacaxi, etc..",
-    price: 20,
+    price: 25,
     imageUrl:
       "https://lvk0y2uvlr.ufs.sh/f/loKb7FsSxkQDdSkniJOP0wI9ALKhXMTjs2bnmVozY4DluFU1",
     category: "pote",
@@ -579,3 +579,9 @@ export const product = [
     category: "picole",
   },
 ];
+
+export const product = rawProducts.map((item, index) => ({
+  ...item,
+  id: `prod-${index + 1}`,
+}));
+
